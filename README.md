@@ -17,13 +17,4 @@
 
 
 
-##### 希望你有所成，完成你的目标。 
-
-
-
-git ：
-
-https://blog.csdn.net/qq_32786873/article/details/80947195
-
-https://blog.csdn.net/strongyoung88/article/details/53231790
-
+##### 希望你有所成，完成你的目标。
