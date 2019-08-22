@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>3_集合</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #content-info{
+            width: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #author-info{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        #title{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-top: 10px;
+            margin-bottom: 2px;
+            font-size: 34px;
+            color: #505050;
+        }
+        .text{
+            white-space:nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 2px;
+            font-size: 20px;
+            color: #8c8c8c;
+        }
+        #navBar{
+            width: auto;
+            height: auto;
+            position: fixed;
+            right:0;
+            bottom: 0;
+            background-color: #f0f3f4;
+            overflow-y: auto;
+            text-align: center;
+        }
+        #svg-container{
+            width: 100%;
+            overflow-x: scroll;
+            min-width: 0px;
+            margin: 0 10px;
+        }
+        #nav-thumbs{
+            overflow-y: scroll;
+            padding: 0 5px;
+        }
+        .nav-thumb{
+            position: relative;
+            margin: 10px auto;
+        }
+        .nav-thumb >p{
+            text-align: center;
+            font-size: 12px;
+            margin: 4px 0 0 0;
+        }
+        .nav-thumb >div{
+            position: relative;
+            display: inline-block;
+            border: 1px solid #c6cfd5;
+        }
+        .nav-thumb img{
+            display: block;
+        }
+        #main-content{
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #d0cfd8;
+            display: flex;
+            height: auto;
+            flex-flow: row wrap;
+            text-align:center;
+        }
+        #svg-container >svg{
+            display: block;
+            margin:10px auto;
+            margin-bottom: 0;
+        }
+        #copyright{
+            bottom: 0;
+            left: 50%;
+            margin: 5px auto;
+            font-size: 16px;
+            color: #515151;
+        }
+        #copyright >a{
+            text-decoration: none;
+            color: #77C;
+        }
+        .number{
+            position: absolute;
+            top:0;
+            left:0;
+            border-top:22px solid #08a1ef;
+            border-right: 22px solid transparent;
+        }
+        .pagenum{
+            font-size: 12px;
+            color: #fff;
+            position: absolute;
+            top: -23px;
+            left: 2px;
+        }
+            #navBar::-webkit-scrollbar{
+            width: 8px;
+            background-color: #f5f5f5;
+        }
+            #navBar::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+            #navBar::-webkit-scrollbar-thumb{
+            border-radius: 8px;
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            background-color: #6b6b70;
+        }
+        #navBar::-webkit-scrollbar-thumb:hover{
+            background-color: #4a4a4f;
+        }
+</style>
+  </head>
+  <body>
+    <div id="main-area">
+      <div id="content-info">
+        <div id="content-info">
+          <div id="title">3_集合</div>
+        </div>
+        <div id="author-info">
+          <div id="author-name" class="text">Administrator</div>
+          <div id="share-time" class="text">2019-08-21</div>
+        </div>
+      </div>
+      <div id="main-content">
+        <div id="svg-container"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="page1" preserveAspectRadio="xMinYMin meet" xmlns:ev="http://www.w3.org/2001/xml-events" ed:name="Page-1" xmlns:ed="https://www.edrawsoft.cn/xml/2017/SVGExtensions/" viewBox="0 0 1283 1881" ed:vSpacing="30" height="1881" ed:hSpacing="30" width="1283">
+    <style type="text/css"><![CDATA[
+g[ed\:togtopicid],g[ed\:hyperlink],g[ed\:comment],g[ed\:note] {cursor:pointer;}
+g[id] {-moz-user-select: none;-ms-user-select: none;user-select: none;}
+svg text::selection,svg tspan::selection{background-color: #4285f4;color: #ffffff;fill: #ffffff;}
+.st6 {fill:#303030;font-family:微软雅黑;font-size:12pt}
+.st5 {fill:#454545;font-family:微软雅黑;font-size:10pt}
+]]></style>
+    <defs>
+        <image id="image3" xlink:href="3_集合.html.files/image3.png" height="229" width="367"/>
+        <pattern id="pat3" height="229" patternUnits="userSpaceOnUse" width="367">
+            <use xlink:href="#image3"/>
+        </pattern>
+        <linearGradient x1="0%" x2="0%" id="lg3" y1="0%" y2="100%">
+            <stop stop-color="#ffffff" offset="0"/>
+            <stop stop-color="#f0f5f0" offset="0.25"/>
+            <stop stop-color="#e1ebe1" offset="0.75"/>
+            <stop stop-color="#c8d7c8" offset="1"/>
+        </linearGradient>
+    </defs>
+    <rect y="0" x="0" fill="url(#pat3)" height="1881" width="1283"/>
+    <path d="M-13.5,115.5C5.4,115.5,-13.5,-115.5,13.5,-115.5" id="102" ed:tosuperid="183" fill="none" transform="matrix(1,0,0,1,245,211)" ed:parentid="184" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,306.9C5.4,306.9,-13.5,-306.9,13.5,-306.9" id="103" ed:tosuperid="184" fill="none" transform="matrix(1,0,0,1,122,633)" ed:parentid="185" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-216.9C5.4,-216.9,-13.5,216.9,13.5,216.9" id="104" ed:tosuperid="186" fill="none" transform="matrix(1,0,0,1,122,1157)" ed:parentid="185" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-98.4C5.4,-98.4,-13.5,98.4,13.5,98.4" id="105" ed:tosuperid="187" fill="none" transform="matrix(1,0,0,1,122,1039)" ed:parentid="185" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,67.6C5.4,67.6,-13.5,-67.6,13.5,-67.6" id="106" ed:tosuperid="188" fill="none" transform="matrix(1,0,0,1,122,873)" ed:parentid="185" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,42.3C4.9,42.3,-12.4,-42.3,13.5,-42.3" id="107" ed:tosuperid="189" fill="none" transform="matrix(1,0,0,1,232,1095)" ed:parentid="187" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" id="108" ed:tosuperid="190" fill="none" transform="matrix(1,0,0,1,232,1145)" ed:parentid="187" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,447.4C5.4,447.4,-13.5,-447.4,13.5,-447.4" id="109" ed:tosuperid="191" fill="none" transform="matrix(1,0,0,1,122,493)" ed:parentid="185" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-454.9C5.4,-454.9,-13.5,454.9,13.5,454.9" id="113" ed:tosuperid="195" fill="none" transform="matrix(1,0,0,1,122,1395)" ed:parentid="185" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-4.8C-1.6,-4.8,2.8,4.8,13.5,4.8" id="114" ed:tosuperid="196" fill="none" transform="matrix(1,0,0,1,201,1855)" ed:parentid="195" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-406.1C5.4,-406.1,-13.5,406.1,13.5,406.1" id="115" ed:tosuperid="197" fill="none" transform="matrix(1,0,0,1,122,1346)" ed:parentid="185" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-341.9C5.4,-341.9,-13.5,341.9,13.5,341.9" id="119" ed:tosuperid="201" fill="none" transform="matrix(1,0,0,1,122,1282)" ed:parentid="185" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-4.8C-1.6,-4.8,2.8,4.8,13.5,4.8" id="120" ed:tosuperid="202" fill="none" transform="matrix(1,0,0,1,234,1629)" ed:parentid="201" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-109.5C5.4,-109.5,-13.5,109.5,13.5,109.5" id="122" ed:tosuperid="204" fill="none" transform="matrix(1,0,0,1,245,436)" ed:parentid="184" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,70.3C5.4,70.3,-13.5,-70.3,13.5,-70.3" id="124" ed:tosuperid="206" fill="none" transform="matrix(1,0,0,1,245,256)" ed:parentid="184" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,17.3C1.2,17.3,-3.7,-17.3,13.5,-17.3" id="125" ed:tosuperid="207" fill="none" transform="matrix(1,0,0,1,245,309)" ed:parentid="184" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-25C2.7,-25,-7.2,25,13.5,25" id="126" ed:tosuperid="208" fill="none" transform="matrix(1,0,0,1,245,352)" ed:parentid="184" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-64.3C5.4,-64.3,-13.5,64.3,13.5,64.3" id="127" ed:tosuperid="209" fill="none" transform="matrix(1,0,0,1,245,391)" ed:parentid="184" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-4.8C-1.6,-4.8,2.8,4.8,13.5,4.8" id="128" ed:tosuperid="210" fill="none" transform="matrix(1,0,0,1,317,191)" ed:parentid="206" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-20.3C1.8,-20.3,-5.1,20.3,13.5,20.3" id="129" ed:tosuperid="211" fill="none" transform="matrix(1,0,0,1,317,206)" ed:parentid="206" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,20.3C1.8,20.3,-5.1,-20.3,13.5,-20.3" id="130" ed:tosuperid="212" fill="none" transform="matrix(1,0,0,1,317,166)" ed:parentid="206" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" id="131" ed:tosuperid="213" fill="none" transform="matrix(1,0,0,1,330,284)" ed:parentid="207" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-9.5C-0.5,-9.5,0.2,9.5,13.5,9.5" id="132" ed:tosuperid="214" fill="none" transform="matrix(1,0,0,1,316,386)" ed:parentid="208" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-4.8C-1.6,-4.8,2.8,4.8,13.5,4.8" id="133" ed:tosuperid="215" fill="none" transform="matrix(1,0,0,1,325,460)" ed:parentid="209" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-94C5.4,-94,-13.5,94,13.5,94" id="139" ed:tosuperid="221" fill="none" transform="matrix(1,0,0,1,245,421)" ed:parentid="184" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,0C-2.7,0,5.4,0,13.5,0" id="140" ed:tosuperid="222" fill="none" transform="matrix(1,0,0,1,337,515)" ed:parentid="221" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,0C-2.7,0,5.4,0,13.5,0" id="141" ed:tosuperid="223" fill="none" transform="matrix(1,0,0,1,586,546)" ed:parentid="204" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,98.8C5.4,98.8,-13.5,-98.8,13.5,-98.8" id="142" ed:tosuperid="224" fill="none" transform="matrix(1,0,0,1,237,706)" ed:parentid="188" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,48.8C5.3,48.8,-13.3,-48.8,13.5,-48.8" id="143" ed:tosuperid="225" fill="none" transform="matrix(1,0,0,1,237,756)" ed:parentid="188" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-14.3C0.6,-14.3,-2.2,14.3,13.5,14.3" id="144" ed:tosuperid="226" fill="none" transform="matrix(1,0,0,1,259,1388)" ed:parentid="186" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,0C-2.7,0,5.4,0,13.5,0" id="145" ed:tosuperid="227" fill="none" transform="matrix(1,0,0,1,458,1434)" ed:parentid="269" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,60.8C5.4,60.8,-13.5,-60.8,13.5,-60.8" id="146" ed:tosuperid="228" fill="none" transform="matrix(1,0,0,1,259,1313)" ed:parentid="186" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-12.5C0.2,-12.5,-1.3,12.5,13.5,12.5" id="147" ed:tosuperid="229" fill="none" transform="matrix(1,0,0,1,330,1340)" ed:parentid="231" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,23.3C2.4,23.3,-6.4,-23.3,13.5,-23.3" id="149" ed:tosuperid="231" fill="none" transform="matrix(1,0,0,1,259,1351)" ed:parentid="186" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,12.5C0.2,12.5,-1.3,-12.5,13.5,-12.5" id="150" ed:tosuperid="232" fill="none" transform="matrix(1,0,0,1,330,1315)" ed:parentid="231" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,0C-2.7,0,5.4,0,13.5,0" id="152" ed:tosuperid="234" fill="none" transform="matrix(1,0,0,1,355,1403)" ed:parentid="226" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-3C-2,-3,3.8,3,13.5,3" id="154" ed:tosuperid="236" fill="none" transform="matrix(1,0,0,1,351,1512)" ed:parentid="237" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-67.3C5.4,-67.3,-13.5,67.3,13.5,67.3" id="155" ed:tosuperid="237" fill="none" transform="matrix(1,0,0,1,259,1441)" ed:parentid="186" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,12.5C0.2,12.5,-1.3,-12.5,13.5,-12.5" id="156" ed:tosuperid="238" fill="none" transform="matrix(1,0,0,1,351,1496)" ed:parentid="237" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-307.4C5.4,-307.4,-13.5,307.4,13.5,307.4" id="158" ed:tosuperid="240" fill="none" transform="matrix(1,0,0,1,122,1248)" ed:parentid="185" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-4.8C-1.6,-4.8,2.8,4.8,13.5,4.8" id="159" ed:tosuperid="241" fill="none" transform="matrix(1,0,0,1,249,1560)" ed:parentid="240" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-9.5C-0.5,-9.5,0.2,9.5,13.5,9.5" id="160" ed:tosuperid="242" fill="none" transform="matrix(1,0,0,1,262,1762)" ed:parentid="197" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-32.8C3.9,-32.8,-10,32.8,13.5,32.8" id="162" ed:tosuperid="244" fill="none" transform="matrix(1,0,0,1,232,1170)" ed:parentid="187" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,17.3C1.2,17.3,-3.7,-17.3,13.5,-17.3" id="163" ed:tosuperid="245" fill="none" transform="matrix(1,0,0,1,232,1120)" ed:parentid="187" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-9.5C-0.5,-9.5,0.2,9.5,13.5,9.5" id="165" ed:tosuperid="247" fill="none" transform="matrix(1,0,0,1,311,717)" ed:parentid="225" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-64.3C5.4,-64.3,-13.5,64.3,13.5,64.3" id="166" ed:tosuperid="248" fill="none" transform="matrix(1,0,0,1,237,869)" ed:parentid="188" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-94C5.4,-94,-13.5,94,13.5,94" id="167" ed:tosuperid="249" fill="none" transform="matrix(1,0,0,1,237,899)" ed:parentid="188" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,0C-2.7,0,5.4,0,13.5,0" id="169" ed:tosuperid="251" fill="none" transform="matrix(1,0,0,1,381,639)" ed:parentid="272" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,0C-2.7,0,5.4,0,13.5,0" id="170" ed:tosuperid="252" fill="none" transform="matrix(1,0,0,1,511,639)" ed:parentid="251" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,23.8C2.5,23.8,-6.6,-23.8,13.5,-23.8" id="173" ed:tosuperid="255" fill="none" transform="matrix(1,0,0,1,237,781)" ed:parentid="188" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-20.3C1.8,-20.3,-5.1,20.3,13.5,20.3" id="174" ed:tosuperid="256" fill="none" transform="matrix(1,0,0,1,237,825)" ed:parentid="188" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,0C-2.7,0,5.4,0,13.5,0" id="176" ed:tosuperid="258" fill="none" transform="matrix(1,0,0,1,576,758)" ed:parentid="280" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-19C1.6,-19,-4.5,19,13.5,19" id="180" ed:tosuperid="262" fill="none" transform="matrix(1,0,0,1,351,865)" ed:parentid="256" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,0C-2.7,0,5.4,0,13.5,0" id="181" ed:tosuperid="263" fill="none" transform="matrix(1,0,0,1,309,934)" ed:parentid="248" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-4.8C-1.6,-4.8,2.8,4.8,13.5,4.8" id="182" ed:tosuperid="264" fill="none" transform="matrix(1,0,0,1,329,998)" ed:parentid="249" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-29.8C3.5,-29.8,-9,29.8,13.5,29.8" id="270" ed:tosuperid="269" fill="none" transform="matrix(1,0,0,1,259,1404)" ed:parentid="186" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,83.3C5.4,83.3,-13.5,-83.3,13.5,-83.3" id="273" ed:tosuperid="272" fill="none" transform="matrix(1,0,0,1,237,722)" ed:parentid="188" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,0C-2.7,0,5.4,0,13.5,0" id="275" ed:tosuperid="274" fill="none" transform="matrix(1,0,0,1,663,639)" ed:parentid="252" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,0C-2.7,0,5.4,0,13.5,0" id="281" ed:tosuperid="280" fill="none" transform="matrix(1,0,0,1,415,758)" ed:parentid="255" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,0C-2.7,0,5.4,0,13.5,0" id="290" ed:tosuperid="289" fill="none" transform="matrix(1,0,0,1,718,758)" ed:parentid="258" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-371.6C5.4,-371.6,-13.5,371.6,13.5,371.6" id="294" ed:tosuperid="293" fill="none" transform="matrix(1,0,0,1,122,1312)" ed:parentid="185" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,0C-2.7,0,5.4,0,13.5,0" id="296" ed:tosuperid="295" fill="none" transform="matrix(1,0,0,1,257,1684)" ed:parentid="293" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" id="299" ed:tosuperid="298" fill="none" transform="matrix(1,0,0,1,330,300)" ed:parentid="207" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-13.5,-125C5.4,-125,-13.5,125,13.5,125" id="302" ed:tosuperid="301" fill="none" transform="matrix(1,0,0,1,245,452)" ed:parentid="184" stroke="#696969" stroke-linecap="round" stroke-linejoin="round"/>
+    <g id="183" ed:height="43.5" transform="matrix(1,0,0,1,258,52)" ed:parentid="184" ed:width="982.5">
+        <path d="M0,43.5L982.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">HashMap 底层是基于散列算法实现，散列算法分为散列再探测和拉链式。HashMap 则使用了拉链式的散列算法，并在 java8 中引入了红黑树优化过长的链表。其数据</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">结构是由数组和链表和红黑树组成。在进行增删查等操作时，首先要定位到元素在 table 数组中的位置，之后再从链表/红黑树中定位该元素。</tspan>
+        </text>
+    </g>
+    <g id="184" ed:height="24.5" transform="matrix(1,0,0,1,135,302)" ed:parentid="185" ed:width="96">
+        <path d="M0,24.5L96,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">HM</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>table 数组的每一个不为 null 元素都是链表的头节点或者是红黑树的根节点。&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>参数解释：&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>initialCapacity 为 HashMap 初始容量（ 初始容量为 16，最大容量为 2 的 30 次方，注：容量必须为 2 的幂。容量代表了源码中 Node&amp;lt;K, V&amp;gt;[] table 数组的长度，假设初始容量为 16 则数组的长度也为 16。假设负载因子为 0.75，则此时阈值为 12，当 HashMap 中键值对的数量（ 源码中由 size 变量表示，初始值为 0 ）超过 12 则会发生扩容，扩容后容量变为 32，阈值变为 24 ）；&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>loadFactor 负载因子（ 默认为 0.75），对于 HashMap 来说，负载因子是一个很重要的参数，该参数反应了 HashMap 的使用情况。通过调节负载因子，可使 HashMap 时间和空间复杂度上有不同的表现。当我们调低负载因子时，HashMap 所能容纳的键值对数量变少。扩容时，重新将键值对存储到新的 HashMap 里，键的键之间产生的碰撞会下降，链表长度变短。此时，HashMap 的增删改查等操作的效率将会变高，这里是典型的拿空间换时间。相反，如果增加负载因子（ 负载因子可以大于 1 ），HashMap 所能容纳的键值对数量变多，空间利用率高，但碰撞率也高。这意味着链表长度变长，效率也随之降低，这种情况是拿时间换空间。一般情况下，使用默认值就可以了；&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>threshold 阈值，即当前 HashMap 所能容纳键值对数量的最大值，当 HashMap 中键值对的数量超过这个值时会引发扩容，扩容时 table 数组的长度以及 threshold 的大小均变为原先的 2 倍；&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>TREEIFY_THRESHOLD 树化阈值为 8，MIN_TREEIFY_CAPACITY 树化的最小数组长度为 64，即当链表长度大于 8 并且此时 table 数组长度大于 64 时才可以进行树化，当链表长度小于等于 6 时取消树化。&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(70,4)"/>
+        </g>
+        <g ed:hyperlink="[&#xa;    {&#xa;        &quot;desc&quot;: &quot;HashMap 源码分析（ java8 ）&quot;,&#xa;        &quot;link&quot;: &quot;https://segmentfault.com/a/1190000012926722&quot;&#xa;    }&#xa;]&#xa;">
+            <use xlink:href="#hyperlink" transform="translate(53,4)"/>
+        </g>
+        <g>
+            <use xlink:href="#attachment" transform="translate(36,4)"/>
+        </g>
+    </g>
+    <symbol id="note">
+        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyOTkwNTNiYS1iMTE3LWZiNDQtOTgwYy1mYjkwYzFiNzJlMWUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkYyRkU5OTU5Nzg0MTFFNzlFMjZFQTA0OUExMTI5NjAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkYyRkU5OTQ5Nzg0MTFFNzlFMjZFQTA0OUExMTI5NjAiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MmY3M2I2ZDQtOWU4NC04ZDQ4LTk5NzItZDE3ODAwZjMyZDYzIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6YzQ3Yzk0OWQtMGQ1Ny0xMWU3LTkzMmUtYzliNjJlYTc1ZTM1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+K193vQAAAZpJREFUeNqkU0svA1EYPXe01UxV0npUSZTUBgtCk6Z2NmJj7R9YsKrHyiMRfoAtWxt/gWAhIkGaSEQqwdBWQrRlKp161PT6xijaejU9yZ17c+ee893z3e9jnHOUAoP2mZpbKkpltP+SEWDzzOoCGuanh/5FTqwunyvbFpdynwzZPIBQTOSHyA0eD9Xmpwhfp9H2YSGLncDRj2RvQxjcaEO61o7U8UlLmr0s0HZfjoCvqy2PxgD+AkTXwO73IKZOkRmYAI9eR+TtjfGCG2iJyYGqAPFNQN4FUhJgqoYYWzyz2O/61Iwi/WnBVx8ESwbJfJjINXQbFTMrne6xXkmy+g0oEOjpbn+b048JsNgqWCJAkS8A8g7BCN7op79rlAsTWLlQKKCzozDKW0Ay8BlZE2gaJpJTP6MVX0YvHSHfwvPVAXneJ3IIKHfQLiXRNUJr57evkyPgaW2EQUlBfagDyuw0RKBlEjDX/V7KWURjcZjlW9jsbvCKdjCHl05U/t0LWZitVRA7BiGIYnHN9N5Q/6/pL/XCSm3nVwEGAAA2iwis0BevAAAAAElFTkSuQmCC" height="16" width="16"/>
+    </symbol>
+    <symbol id="hyperlink">
+        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTJGODZDMEQ5Nzg0MTFFN0E1QkQ5MTVGMzVENEU0NjUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTJGODZDMEM5Nzg0MTFFN0E1QkQ5MTVGMzVENEU0NjUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjQ3NTkzRDY0Q0RBMTFFN0E1OTFFREQ1OEEwMjU2QjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjQ3NTkzRDc0Q0RBMTFFN0E1OTFFREQ1OEEwMjU2QjQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz56C9ycAAAC/klEQVR42oxTa0iTYRR+3m/f7mnNSyOjqZWmCEWXlegyLy0wIoJIiKQoqB/9KIruU5yioBlEGV0lf1RgdKGCDE1zK+clSQO10pU6M811ma7UzX2XXgdBJljn/Hjh5TnPOTznOQSiCBcn7L5d8+HC2+9jKn24BjsSdGZ94bNcKcdA4MfxO0QCTMhkUHlEcEopWg4mgB3hhaN5TR9PN9gcCAhUoMn+HW++/DBbDiWxxuK6bPwj2JrmT3kNVe+xZ0MUMlbNR3OPC6Y77eC8YlblEQMxFj3NmomA6Xd7FCIrwfrYUAQoWKTSt2BbHF50fkXh43em2pMb8mYk0C8KhkizvPGj/6PbOQpOBA5vWoxnHV9wq7EvuzEnPZZIFCCMHITmFIL4RUG5+1Ii8KBlAKXWHnR/HUXO/Q50D41BF6pCfde3SZwe/kIybQJJtSrNUrJ9GeF4MbmszoGwOUqEB6vw6NUAJjgBSTEh0EcGXU2NnRtxLD2aXKnrcUnpiIJUgsH4BZDojLtx3WK3XNy1kvAgyTdsfRgZ92HUy4ETRMgpsKLtc+bDlsGdDEMOnMtYRvHd1ikEdNm4VuuwXNq1nGjU0uQ3A25EzwuEdrYcrb3D+DzswSwFg6p2J3iCZNoMpTaHdZKAJBY9B3xe8JwEooxF48m1UUNuj0EbqBgrrOgsr2kfwk8vjy0rwigJi5v1fdhjCMfelIVmqceXy/4tSmKBxS6Igt1mSsloc4wgLEiJpQvm4G5zPwq2xvmLy6y9kCpZsy9eB2aarIQuijBgCLEnxYSia+AnIkPUyNocA12werIz0unol6s/oN45amb+LuZlSvByFdacedmamajLX0eNVfy4E0pqtsVz1X5YJnUsoQK/bh0EO5PLUs+/yq7cv5wRBPGU6V4HCmiD1ZEa1L51+j0RolEMTxVRLqXXIaO+/ONYPGOoPGrIL3rSZapuG0IgvUI3XXNqnBbHN0bvZfEfkXa2PqvpRBIXq52V09zrwhJtwI+dhvAjxpKXpb8EGAC1AzS9LEFQkQAAAABJRU5ErkJggg==" height="16" width="16"/>
+    </symbol>
+    <symbol id="attachment">
+        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA25pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyNmUwNTM3Zi1iM2U0LTg5NDktYTJmNy03MjRjZTE5NTJmODgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkQyOTY5MTI5Nzg0MTFFN0I1ODJFMEEzNzgwOEZBQ0UiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkQyOTY5MTE5Nzg0MTFFN0I1ODJFMEEzNzgwOEZBQ0UiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjI0NTU0NjgwRTFFMTFFN0E3NURDN0EzRUY2MDZBQ0MiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjI0NTU0NjkwRTFFMTFFN0E3NURDN0EzRUY2MDZBQ0MiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7ieBjUAAACzklEQVR42nxTa0iTURh+1F2c000nzgtTp+UlxdvYDwvvSKImJBoZFGUSipgYQVr5IzISpB9RrSQqFH/kAsEKTK28Wyjm1C5esdSy5TWvc3NzvRtNNNMD33cO73me55z3fd5jptfrkXC5EruNmuK0IJouzi6qGPY8Tjmt3xBe93cP5thjEKBcMazsedbUf2pgYvZE+6eJWgqrKe5twpjtdoOy/CRZ6cvubEsmAyIHHjRaHQYnZuHrZo/ThwMNEDZ9GvNdTs7t7J/M1uo2cDzaD4GeQsRKPJCVJEGjYgxNvWMG2AXDb4dA1bXU5KrWgduPXvUgTuqJlr5x9I1OQaVeh7sjH+cSg9HcO465JdWlHQJ0snRmYVXe3DNmdiM9CvPLa/g1vwJvkQAl8vcYn1qE0JYLtUaLZdW6YJsAkT0+fp1quvK4kRkW4IqFVTWq2wZxNMwHUh9nBHgIMTmzBBWRrTksWLIsVJsCRDaotVQ2fOZGBLrBX+wAWXWXkbzfxQ4fhn5iemEVIV5OqOkYAdlpuEmpSYBFm23FT9+JOGymkVRe32cs3pFQL3QPK3G9ohVSb2eU1fZCMaLEQX/RNPEKTAKlz9uHDgyRRSkRviiqaAPfio2oIHfKUwN54xfkpx1C0D4hqBdwKyt2nlyJJOs1JoGuWIkYNzOiAT3gaMfF1ZNh4HPZyL1XDw6bAR3Zef5uHag2a64OvHgi95tqZxC4L3ayNae8Zg3+ugl5oN4yjoyEYBSS2FvFN5yND15PCfdNJHLHVueMRaSgnsW0kAtsOPhBlV5SqaFZ18FZwEWe7DWYFuYbyWE+qYRr+LdvGFvWRTEScXbhkybUdo5i6vcKlHPLEPAs9cei/HKI/OJ/XbvZBwRQOvCtQovSI7XfpxfhYm+NcLL0TFxgQZ6s/sFuD25bJxryI39tM5MkmTEh4of2NpyEnDt1JXu92D8CDACKzRo9vWOXUwAAAABJRU5ErkJggg==" height="16" width="16"/>
+    </symbol>
+    <g id="185" ed:topictype="drilltop" ed:height="226" ed:layout="rightmap" transform="matrix(1,0,0,1,21,827)" ed:width="87">
+        <path d="M4,0L83,0C85.7,0,87,1.3,87,4L87,222C87,224.7,85.7,226,83,226L4,226C1.3,226,0,224.7,0,222L0,4C0,1.3,1.3,0,4,0z" fill="#cfebf6" stroke="#ebecf3" stroke-linejoin="round"/>
+        <text class="st6">
+            <tspan y="23.5" x="18" style="white-space:pre">集合，</tspan>
+            <tspan y="44.5" x="18" style="white-space:pre">按照成</tspan>
+            <tspan y="65.5" x="18" style="white-space:pre">员变</tspan>
+            <tspan y="86.5" x="18" style="white-space:pre">量，构</tspan>
+            <tspan y="107.5" x="18" style="white-space:pre">造方</tspan>
+            <tspan y="128.4" x="18" style="white-space:pre">法，常</tspan>
+            <tspan y="149.4" x="18" style="white-space:pre">用 API </tspan>
+            <tspan y="170.4" x="18" style="white-space:pre">的顺序</tspan>
+            <tspan y="191.4" x="18" style="white-space:pre">来阅读</tspan>
+            <tspan y="212.4" x="18" style="white-space:pre">源码</tspan>
+        </text>
+    </g>
+    <g id="186" ed:height="24.5" transform="matrix(1,0,0,1,135,1350)" ed:parentid="185" ed:width="110">
+        <path d="M0,24.5L110,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">ArrayList</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>参数解释：&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>Object[] elementData 存储集合元素的底层实现（ 即真正存放元素的数组 ）；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>int size 表示当前元素的数量；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA，EMPTY_ELEMENTDATA 定义了两个空数组；DEFAULT_CAPACITY 数组初始容量，大小为 10。 &lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑'; color:#454545;&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>构造方法：当使用默认构造方法时，会将定义好的空数组赋给 elementData；当指定了初始容量并且初始容量大于 0 时，则新建一个长度为 initialCapacity 的 Object 数组。&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑'; color:#454545;&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>关于初始化方法中出现的 Arrays.copyOf() 方法：该方法底层调用的是 System.arraycopy(src, srcPos, dest, destPos, length) 方法，表示将 src 数组中第 srcPos 位开始的 length 个元素复制到 desc 数组的 第 descPos 位置上，arraycopy 是 native 方法，用于批量赋值元素至新数组中。&lt;/span>&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(84,4)"/>
+        </g>
+        <g ed:hyperlink="[&#xa;    {&#xa;        &quot;desc&quot;: &quot;ArrayList 源码解析 1&quot;,&#xa;        &quot;link&quot;: &quot;https://blog.csdn.net/zxt0601/article/details/77281231#commentBox&quot;&#xa;    },&#xa;    {&#xa;        &quot;desc&quot;: &quot;ArrayList 源码解析 2&quot;,&#xa;        &quot;link&quot;: &quot;https://blog.csdn.net/dc12dc34/article/details/81239742&quot;&#xa;    }&#xa;]&#xa;">
+            <use xlink:href="#hyperlink" transform="translate(67,4)"/>
+        </g>
+    </g>
+    <g id="187" ed:height="62.5" transform="matrix(1,0,0,1,135,1075)" ed:parentid="185" ed:width="83.5">
+        <path d="M0,62.5L83.5,62.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">HM, </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">Hashtable, </tspan>
+            <tspan y="54.1" x="8" style="white-space:pre">CHM</tspan>
+        </text>
+    </g>
+    <g id="188" ed:height="24.5" transform="matrix(1,0,0,1,135,781)" ed:parentid="185" ed:width="88">
+        <path d="M0,24.5L88,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">CHM</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>参数解释：&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>MAXIMUM_CAPACITY ( 2 的 30 次方 ) 表示 table 的最大容量；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>DEFAULT_CAPACITY ( 16 ) 表示 table 的初始化时的默认容量；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>LOAD_FACTOR ( 0.75f ) 负载因子；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>TREEIFY_THRESHOLD ( 8 ) 链表转化为红黑树的阈值；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>UNTREEIFY_THRESHOLD ( 6 ) 由红黑树转化为链表的阈值；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>MIN_TREEIFY_CAPACITY ( 64 ) 由链表转化为红黑树的 table 的最小长度；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>MIN_TRANSFER_STRIDE ( 16 ) 每次进行转移的最小值；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>RESIZE_STAMP_BITS ( 16 ) 生成 sizeCtl 所使用的 bit 位数；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>MAX_RESIZERS ( (1 &amp;lt;&amp;lt; (32 - RESIZE_STAMP_BITS)) - 1 ) 进行扩容所允许的最大线程数；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>RESIZE_STAMP_SHIFT ( 32 - RESIZE_STAMP_BITS ) 记录 sizeCtl 中的大小所需要进行的偏移位数；&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑'; color:#454545;&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>sizeCtl 控制标识符，不同的值表示不同的意义。&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>-1 代表正在初始化 ；-(1+N) 表示有 N-1 个线程正在进行扩容操作；0 代表 table 还没有被初始化；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>正数表示扩容阈值，它的值始终是当前 ConcurrentHashMap 容量的 0.75 倍，当实际容量 &amp;gt;= sizeCtl，则扩容。&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑'; color:#454545;&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>计算 CHM 中键值对的个数，建议使用 mappingCount 方法而不是 size 方法。不过，这两个方法的返回值是估计值，由于存在并发的插入和删除，因此返回值可能与实际值会有出入。&lt;/span>&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(62,4)"/>
+        </g>
+        <g ed:hyperlink="[&#xa;    {&#xa;        &quot;desc&quot;: &quot;CHM 入门，参考&quot;,&#xa;        &quot;link&quot;: &quot;https://blog.csdn.net/u010412719/article/details/52145145#commentBox&quot;&#xa;    },&#xa;    {&#xa;        &quot;desc&quot;: &quot;一些术语解释，略读即可&quot;,&#xa;        &quot;link&quot;: &quot;https://www.jianshu.com/p/5a9a814c420e&quot;&#xa;    },&#xa;    {&#xa;        &quot;desc&quot;: &quot;略读即可&quot;,&#xa;        &quot;link&quot;: &quot;http://www.cnblogs.com/huaizuo/archive/2016/04/20/5413069.html&quot;&#xa;    },&#xa;    {&#xa;        &quot;desc&quot;: &quot;transfer 扩容过程详解，参考&quot;,&#xa;        &quot;link&quot;: &quot;https://www.jianshu.com/p/2829fe36a8dd&quot;&#xa;    },&#xa;    {&#xa;        &quot;desc&quot;: &quot;transfer 扩容补充&quot;,&#xa;        &quot;link&quot;: &quot;https://www.jianshu.com/p/dc69edc17b32&quot;&#xa;    }&#xa;]&#xa;">
+            <use xlink:href="#hyperlink" transform="translate(45,4)"/>
+        </g>
+    </g>
+    <g id="189" ed:height="43.5" transform="matrix(1,0,0,1,246,1009)" ed:parentid="187" ed:width="900">
+        <path d="M0,43.5L900,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">Hashtable 中数组默认大小是 11，增加的方式是 old*2+1。HashMap，CurrentHashMap 中数组的默认大小是 16，而且一定是 2 的指数，增加的方式</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">是将原来的数组长度扩大 2 倍。</tspan>
+        </text>
+    </g>
+    <g id="190" ed:height="43.5" transform="matrix(1,0,0,1,246,1109)" ed:parentid="187" ed:width="932">
+        <path d="M0,43.5L932,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">计算 key 的 hashcode 值的方式不一样：java8 中 HashMap：return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16)；而 Hashtbale：int hash = </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">key.hashCode()，这也是 hashtable 中 key 不能为 null 的原因；CHM：int hash = (key.hashCode() ^ (key.hashCode() >>> 16)) &amp; HASH_BITS。</tspan>
+        </text>
+    </g>
+    <g id="191" ed:height="24.5" transform="matrix(1,0,0,1,135,21)" ed:parentid="185" ed:width="910">
+        <path d="M0,24.5L910,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">Java 的集合类主要由两个接口派生而出：Collection 和 Map，Collection 和 Map 是 java 集合框架的根接口，这两个接口又包含了一些接口或实现类。</tspan>
+        </text>
+        <g>
+            <use xlink:href="#attachment" transform="translate(884,4)"/>
+        </g>
+    </g>
+    <g id="195" ed:height="62.5" transform="matrix(1,0,0,1,135,1788)" ed:parentid="185" ed:width="52.5">
+        <path d="M0,62.5L52.5,62.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">List，</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">Set，</tspan>
+            <tspan y="54.1" x="8" style="white-space:pre">Map</tspan>
+        </text>
+    </g>
+    <g id="196" ed:height="81.5" transform="matrix(1,0,0,1,215,1778)" ed:parentid="195" ed:width="1031">
+        <path d="M0,81.5L1031,81.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">List，Set 都是继承自 Collection 接口；List 特点：1. 可以允许重复的对象；2. 可以插入多个 null 元素；3. 是一个有序容器，保持了每个元素的插入顺序，输出的顺序就是插入</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">的顺序。Set 特点：1. 不允许重复对象；2. 无序容器，你无法保证每个元素的存储顺序（ TreeSet 通过 Comparator  或者 Comparable 维护了一个排序顺序 ）；3. 只允许一个 </tspan>
+            <tspan y="54.1" x="8" style="white-space:pre">null 元素。Map 不是 Collection 的子接口或者实现类，Map是一个单独的接口。Map 特点：1. Map 的 每个 Entry 都持有两个对象，也就是一个键一个值；2. Map 可能会持</tspan>
+            <tspan y="73.1" x="8" style="white-space:pre">有相同的值对象但键对象必须是唯一的。</tspan>
+        </text>
+    </g>
+    <g id="197" ed:height="43.5" transform="matrix(1,0,0,1,135,1709)" ed:parentid="185" ed:width="113.5">
+        <path d="M0,43.5L113.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">HashSet 是如何</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">保证不重复</tspan>
+        </text>
+    </g>
+    <g id="201" ed:height="43.5" transform="matrix(1,0,0,1,135,1581)" ed:parentid="185" ed:width="85.5">
+        <path d="M0,43.5L85.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">ArrayList，</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">LinkedList</tspan>
+        </text>
+    </g>
+    <g id="202" ed:height="62.5" transform="matrix(1,0,0,1,248,1571)" ed:parentid="201" ed:width="991">
+        <path d="M0,62.5L991,62.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">LinkedList 是基于双向链表实现的，ArrayList 是基于数组实现的；LinkedList 添加、插入、删除元素速度更快，而 ArrayList 查询速度更快；LinkedList 使用 Node 来存</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">储数据，每个 Node 中不仅存储元素的值，还存储了前后 Node 的引用，占用内存更多，而 ArrayList 使用 Object 数组来存储数据，占用内存相比会更少；LinkedList </tspan>
+            <tspan y="54.1" x="8" style="white-space:pre">和 ArrayList 都是线程不安全的。可以使用并发包下的 CopyOnWriteArrayList 作为并发环境下线程安全的 ArrayList 的解决方案。</tspan>
+        </text>
+    </g>
+    <g id="204" ed:height="24.5" transform="matrix(1,0,0,1,258,521)" ed:parentid="184" ed:width="314">
+        <path d="M0,24.5L314,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">为什么容量（ 即 table 数组的长度 ）必须是 2 的幂</tspan>
+        </text>
+    </g>
+    <g id="206" ed:height="43.5" transform="matrix(1,0,0,1,258,143)" ed:parentid="184" ed:width="45.5">
+        <path d="M0,43.5L45.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">get </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">方法</tspan>
+        </text>
+    </g>
+    <g id="207" ed:height="43.5" transform="matrix(1,0,0,1,258,249)" ed:parentid="184" ed:width="58.5">
+        <path d="M0,43.5L58.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">遍历 </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">HM</tspan>
+        </text>
+    </g>
+    <g id="208" ed:height="43.5" transform="matrix(1,0,0,1,258,333)" ed:parentid="184" ed:width="44.5">
+        <path d="M0,43.5L44.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">put </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">方法</tspan>
+        </text>
+    </g>
+    <g id="209" ed:height="43.5" transform="matrix(1,0,0,1,258,412)" ed:parentid="184" ed:width="53.5">
+        <path d="M0,43.5L53.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">resize </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">方法</tspan>
+        </text>
+    </g>
+    <g id="210" ed:height="43.5" transform="matrix(1,0,0,1,331,152)" ed:parentid="206" ed:width="869">
+        <path d="M0,43.5L869,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">调用 hash() 方法 计算 key 的 hashcode 值，(h = key.hashCode()) ^ (h >>> 16) 通过异或操作变相地让 key 的高 16 位参与 hashcode 的计算，</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">加大低 16 位信息的随机性，从而加大 hash 的复杂度。</tspan>
+        </text>
+    </g>
+    <g id="211" ed:height="24.5" transform="matrix(1,0,0,1,331,202)" ed:parentid="206" ed:width="911">
+        <path d="M0,24.5L911,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">通过 (n - 1) &amp; hash（ 相当于 hash % n ），计算当前节点在 table 数组中的位置，其中 hash 为 key 的 hashcode 值， n 为 HashMap 中 table 的长度。</tspan>
+        </text>
+    </g>
+    <g id="212" ed:height="43.5" transform="matrix(1,0,0,1,331,102)" ed:parentid="206" ed:width="891">
+        <path d="M0,43.5L891,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">主要流程：1. 计算 key 的 hash 值；2. 根据 hash 值获取对应的数组元素（ 该元素代表了链表的头节点或红黑树的根节点 ）；3. 遍历链表/红黑树，返</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">回匹配到的节点，匹配不到则返回 null。</tspan>
+        </text>
+    </g>
+    <g id="213" ed:height="43.5" transform="matrix(1,0,0,1,344,233)" ed:parentid="207" ed:width="899">
+        <path d="M0,43.5L899,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">调用了 HashIterator 类的方法，主要流程：找到 table 的第一个包含节点的元素，遍历该元素所在的链表直至链表末尾。接着在 table 中寻找第二个</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">包含节点的元素，如此往复直到遍历完 table 中所有节点。</tspan>
+        </text>
+        <g>
+            <use xlink:href="#attachment" transform="translate(873,14)"/>
+        </g>
+    </g>
+    <g id="214" ed:height="81.5" transform="matrix(1,0,0,1,330,314)" ed:parentid="208" ed:width="920">
+        <path d="M0,81.5L920,81.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">作用是更新已存在的节点或者插入新节点，主要流程：如果此时 table 为 null 或者 table 的长度为 0，则调用 resize() 进行初始化。根据 key 的hashcode </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">值获取对应的数组元素，若该下标没有任何节点则直接插入新节点；若已经存在节点，遍历链表（ 或者红黑树，取决于头节点是否属于 TreeNode 类型 </tspan>
+            <tspan y="54.1" x="8" style="white-space:pre">），若找到相同 key 的节点则更新，否则往链表末尾插入新节点。最后，如果是更新节点则返回该节点的 oldValue，如果是插入新节点则判断是否需要扩</tspan>
+            <tspan y="73.1" x="8" style="white-space:pre">容并返回 null。</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>涉及：&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>resize(): 扩容；&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>putTreeVal(): 红黑树的插入；&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>treeifyBin(): 链表树化，注意，只有当链表长度超过 8 并且 table 的长度大于 64 时才会进行链表树化，&lt;/span>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>若 table 数组长度小于 64，则优先进行扩容而不是树化。&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>putTreeVal()，treeifyBin() 暂时没有深入研究。&lt;/span>&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(894,33)"/>
+        </g>
+    </g>
+    <g id="215" ed:height="62.5" transform="matrix(1,0,0,1,339,402)" ed:parentid="209" ed:width="905">
+        <path d="M0,62.5L905,62.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">主要流程：根据现有 table 的长度以及阈值计算新的 table 长度 （ newCap ）以及新的阈值（ 长度和阈值同时扩大 2 倍 ），创建新的长度为 newCap </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">的数组并将其赋给 table。如果是初始化操作，直接返回新 table；如果是扩容操作的话，需要将旧 table 中的所有节点重新映射到新 table里，然后再</tspan>
+            <tspan y="54.1" x="8" style="white-space:pre">返回新 table。</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>oldCap &amp;gt; 0 表示进行的是扩容操作；剩下的两个分支表示进行的是初始化操作，当调用的是 HashMap(int initialCapacity)  或者 HashMap(int initialCapacity, float loadFactor) 构造方法时，这两个方法都会计算出 threshold 的值，因此会进入 oldThr &amp;gt; 0 分支；当调用的是 HashMap() 构造方法则进入 else 分支。&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑'; color:#454545;&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>重映射流程：如果链表仅有一个节点即只存在头节点，直接将头节点映射到新 table 里，如果链表中存在多个节点，根据头节点是否属于 TreeNode 分为 2 种情况：1. 属于，进行红黑树的拆分；2. 不属于，根据 (e.hash &amp;amp; oldCap) == 0 拆分成两个链表，一个放于原下标位置，另一个放于原下标 + oldCap 位置。&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>涉及：&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>split()：红黑树的拆分，当拆分后的树的长度小于等于 6 时，退化为链表。&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>split() 暂时没有深入研究。&lt;/span>&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(879,23)"/>
+        </g>
+    </g>
+    <g id="221" ed:height="43.5" transform="matrix(1,0,0,1,258,471)" ed:parentid="184" ed:width="65.5">
+        <path d="M0,43.5L65.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">remove </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">方法</tspan>
+        </text>
+    </g>
+    <g id="222" ed:height="43.5" transform="matrix(1,0,0,1,351,471)" ed:parentid="221" ed:width="891">
+        <path d="M0,43.5L891,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">主要流程：根据 hash 值定位数组元素的位置， 遍历该元素所在的链表/红黑树并寻找键值相等的节点，找到则调整链表指针位置并将该节点返回。若找</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">不到则返回 null。</tspan>
+        </text>
+    </g>
+    <g id="223" ed:height="24.5" transform="matrix(1,0,0,1,599,521)" ed:parentid="204" ed:width="403">
+        <path d="M0,24.5L403,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">n 为 2 的幂次方，可以保证数据的均匀插入，减少 hash 冲突。</tspan>
+        </text>
+        <g ed:hyperlink="[&#xa;    {&#xa;        &quot;desc&quot;: &quot;HashMap 容量为 2 次幂的原因&quot;,&#xa;        &quot;link&quot;: &quot;https://blog.csdn.net/eaphyy/article/details/84386313&quot;&#xa;    }&#xa;]&#xa;">
+            <use xlink:href="#hyperlink" transform="translate(377,4)"/>
+        </g>
+    </g>
+    <g id="224" ed:height="24.5" transform="matrix(1,0,0,1,250,583)" ed:parentid="188" ed:width="841">
+        <path d="M0,24.5L841,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">构造函数（ 不包括参数为空的构造函数 ）主要干了两件事：1. 参数的有效性检查；2. 设置 sizeCtl 的值（ 如果不指定默认情况下为 16 ）。</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>tableSizeFor() 根据输入的值 c 的大小来确定一个最小的且大于等于输入值 c 的 2 的 n 次幂，当 c 为 15 时结果为 16；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>看不懂 tableSizeFor(size + (size &amp;gt;&amp;gt;&amp;gt; 1) + 1) 为什么要这样？？？&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑'; color:#454545;&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>值得注意的是，构造函数中的 concurrencyLevel 参数已经在 java8 中的意义发生了很大的变化，其并不代表所允许的并发数而只是用来确定 sizeCtl 的大小，在 java8 中的并发控制都是针对 table 数组而言，即 table 数组长度有多大就可以允许多少个并发数。&lt;/span>&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(815,4)"/>
+        </g>
+    </g>
+    <g id="225" ed:height="43.5" transform="matrix(1,0,0,1,250,664)" ed:parentid="188" ed:width="47.5">
+        <path d="M0,43.5L47.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">put </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">方法</tspan>
+        </text>
+    </g>
+    <g id="226" ed:height="43.5" transform="matrix(1,0,0,1,272,1359)" ed:parentid="186" ed:width="69">
+        <path d="M0,43.5L69,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">remove </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">方法</tspan>
+        </text>
+    </g>
+    <g id="227" ed:height="24.5" transform="matrix(1,0,0,1,471,1409)" ed:parentid="269" ed:width="751">
+        <path d="M0,24.5L751,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">removeAll(Collection&lt;?> c) 中 调用 batchRemove(c, false)，retainAll(Collection&lt;?> c) 中调用 batchRemove(c, true)。</tspan>
+        </text>
+        <g>
+            <use xlink:href="#attachment" transform="translate(725,4)"/>
+        </g>
+    </g>
+    <g id="228" ed:height="43.5" transform="matrix(1,0,0,1,272,1209)" ed:parentid="186" ed:width="985.5">
+        <path d="M0,43.5L985.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">ArrayList 是一个动态数组，它是线程不安全的，允许元素为 null。其底层数据结构依然是数组，它实现了 List&lt;E>, RandomAccess, Cloneable, java.io.Serializable 接</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">口，其中 RandomAccess 代表了其拥有随机快速访问的能力，ArrayList 可以以 O(1) 的时间复杂度去根据下标访问或者修改元素。缺点：占据一块连续的内存空间。</tspan>
+        </text>
+    </g>
+    <g id="229" ed:height="43.5" transform="matrix(1,0,0,1,344,1309)" ed:parentid="231" ed:width="905">
+        <path d="M0,43.5L905,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">扩容操作也是ArrayList 的一个性能消耗比较大的地方，所以若我们可以提前预知数据的规模，应该通过 public ArrayList(int initialCapacity) {} 构造方法，</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">指定集合的大小，去构建 ArrayList 实例，以减少扩容次数，提高效率。</tspan>
+        </text>
+    </g>
+    <g id="231" ed:height="43.5" transform="matrix(1,0,0,1,272,1284)" ed:parentid="186" ed:width="44.5">
+        <path d="M0,43.5L44.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">add </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">方法</tspan>
+        </text>
+    </g>
+    <g id="232" ed:height="43.5" transform="matrix(1,0,0,1,344,1259)" ed:parentid="231" ed:width="867">
+        <path d="M0,43.5L867,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">主要流程：elementData 数组现有的元素个数 + 1 后，判断其值是否大于 elementData 数组的长度，是的话进行扩容操作，数组长度扩大为原先的 </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">1.5 倍，在新数组末尾添加元素并修改 size 的值，否则在原先数组末尾添加元素并修改 size 值。</tspan>
+        </text>
+    </g>
+    <g id="234" ed:height="43.5" transform="matrix(1,0,0,1,368,1359)" ed:parentid="226" ed:width="889.5">
+        <path d="M0,43.5L889.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">主要流程：判断下标合法性，根据要 remove 掉的元素的下标计算需要移动的元素个数，调用 System.arraycopy(a, 0, elementData, index, num) 方法</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">进行移动，将最后一个元素置为 null 并修改 size 的值。</tspan>
+        </text>
+    </g>
+    <g id="236" ed:height="24.5" transform="matrix(1,0,0,1,365,1490)" ed:parentid="237" ed:width="474">
+        <path d="M0,24.5L474,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">进行遍历删除的时候一定要使用集合内部的迭代器提供的 remove 方法。</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>正确用法：&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'Consolas'; color:#000000;&quot;>Iterator&amp;lt;String&amp;gt; it = list.iterator();&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'Consolas'; color:#0000ff;&quot;>while&lt;/span>&lt;span style=&quot; font-family:'Consolas'; color:#000000;&quot;>(it.hasNext()){&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'Consolas'; color:#000000;&quot;>    String x = it.next();&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'Consolas'; color:#000000;&quot;>    &lt;/span>&lt;span style=&quot; font-family:'Consolas'; color:#0000ff;&quot;>if&lt;/span>&lt;span style=&quot; font-family:'Consolas'; color:#000000;&quot;>(x.equals(&amp;quot;del&amp;quot;)){&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'Consolas'; color:#000000;&quot;>        it.remove();&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'Consolas'; color:#000000;&quot;>    }&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'Consolas'; color:#000000;&quot;>}&lt;/span>&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(448,4)"/>
+        </g>
+        <g>
+            <use xlink:href="#attachment" transform="translate(431,4)"/>
+        </g>
+    </g>
+    <g id="237" ed:height="62.5" transform="matrix(1,0,0,1,272,1446)" ed:parentid="186" ed:width="65.5">
+        <path d="M0,62.5L65.5,62.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">使用 </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">Iterator </tspan>
+            <tspan y="54.1" x="8" style="white-space:pre">遍历</tspan>
+        </text>
+    </g>
+    <g id="238" ed:height="43.5" transform="matrix(1,0,0,1,365,1440)" ed:parentid="237" ed:width="897">
+        <path d="M0,43.5L897,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">对 ArrayList 内容的修改都将改变 modCount ，在迭代器初始化过程中会将这个值赋给迭代器的 expectedModCount。在迭代过程中，判断 modCount </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">跟 expectedModCount 是否相等，如果不相等就表示已经有其他线程修改了 ArrayList，抛出 ConcurrentModificationException，实现快速失败。</tspan>
+        </text>
+    </g>
+    <g id="240" ed:height="24.5" transform="matrix(1,0,0,1,135,1531)" ed:parentid="185" ed:width="100">
+        <path d="M0,24.5L100,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">LinkedList</tspan>
+        </text>
+        <g ed:hyperlink="[&#xa;    {&#xa;        &quot;desc&quot;: &quot;对 LinkedList 的理解，略读即可&quot;,&#xa;        &quot;link&quot;: &quot;https://blog.csdn.net/qq_41701956/article/details/85041420&quot;&#xa;    }&#xa;]&#xa;">
+            <use xlink:href="#hyperlink" transform="translate(74,4)"/>
+        </g>
+    </g>
+    <g id="241" ed:height="43.5" transform="matrix(1,0,0,1,262,1521)" ed:parentid="240" ed:width="979.5">
+        <path d="M0,43.5L979.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">LinkedList 实现了 List 接口（ 内部是双向链表结构 ）和 Deque（双端队列） 接口，所以既可以作为链表（ 常用的方法有 add()，remove()，get() ）使用，也可以</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">作为队列（ 常用的方法有 offer()，poll()，peek() ）使用，还可以作为堆栈（ 常用的方法有 push()，pop() ）使用。</tspan>
+        </text>
+        <g>
+            <use xlink:href="#attachment" transform="translate(954,14)"/>
+        </g>
+    </g>
+    <g id="242" ed:height="81.5" transform="matrix(1,0,0,1,276,1690)" ed:parentid="197" ed:width="944">
+        <path d="M0,81.5L944,81.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">HashSet 中由于只包含键，不包含值，由于在底层具体实现时，使用的 HashMap 或者是 LinkedHashMap（ 可以指定构造函数来确定使用哪种结构 ）。</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">HashMap 是键值对存储，为了适应 HashMap 存储，HashSet 增加了一个 PRESENT 类域（ 类所有 ），所有的键都有同一个值（ PRESENT ）。HashSet 的 </tspan>
+            <tspan y="54.1" x="8" style="white-space:pre">add 方法：public boolean add(E e) {return map.put(e, PRESENT)==null;}，添加进来的元素作为 HashMap 的 key，而 HashMap 中 key 是 唯一的，故保证 </tspan>
+            <tspan y="73.1" x="8" style="white-space:pre">HashSet 不会保存重复的元素。</tspan>
+        </text>
+    </g>
+    <g id="244" ed:height="43.5" transform="matrix(1,0,0,1,246,1159)" ed:parentid="187" ed:width="963">
+        <path d="M0,43.5L963,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">Hashtable 是基于哈希表的 Map 接口的同步实现，不允许使用 null 值和 null 键，在修改数据时锁住整个 HashTable，因此是线程安全的但是效率低；HashMap 允</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">许键值为 null（ 只能是一个 null 键，可以有多个 null 值 ）；ConcurrentHashMap 不允许 null 用作键或值。</tspan>
+        </text>
+    </g>
+    <g id="245" ed:height="43.5" transform="matrix(1,0,0,1,246,1059)" ed:parentid="187" ed:width="999">
+        <path d="M0,43.5L999,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">ConcurrentHashMap 的底层与 Java8 的 HashMap 有相通之处，底层依然由数组+链表+红黑树来实现的，底层结构存放的是 TreeBin 对象，而不是 TreeNode 对象；</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">ConcurrentHashMap 实现中借用了较多的 CAS 算法，并且也会使用 synchronized 锁定头节点一起保证线程安全。</tspan>
+        </text>
+    </g>
+    <g id="247" ed:height="81.5" transform="matrix(1,0,0,1,325,645)" ed:parentid="225" ed:width="935">
+        <path d="M0,81.5L935,81.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">主要流程：当 key 或者 value 为空，直接报 NPE。计算 key 的 hashcode 值，如果 table 为 null 或者 table 的长度为 0，调用 initTable() 进行初始化。根</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">据 hashcode 值获取相应的数组元素（ 作为链表的头节点或者红黑树的根节点 ），若头节点为 null，直接插入新节点；若头节点不为 null 并且头节点的 </tspan>
+            <tspan y="54.1" x="8" style="white-space:pre">hash 为 MOVED，则调用 helpTransfer() 帮助扩容；若头节点不为 null 并且其 hash 不为 MOVED，用 synchronized 锁住头节点，遍历链表/红黑树，找</tspan>
+            <tspan y="73.1" x="8" style="white-space:pre">到相应的节点则更新，找不到则插入新节点。最后判断是否需要树化，调用 addCount 方法，如果更新了节点则返回节点旧值，否则返回 null。</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑'; color:#454545;&quot;>initTable()：并发的时候有很多线程在调用 initTable 方法，最先调用到 initTable 的线程 a 将 sizeCtl 设置为 -1（ 为了防止其他线程也做初始化操作，因为其他线程进入这个方法后会因为 sizeCtl &amp;lt; 0 而让步 ），然后判断 sizeCtl 的值是否 &amp;gt; 0，是则用原来的值否则用 DEFAULT_CAPACITY（ 16 ）赋值给 n，创建长度为 n 的数组并赋给 table，重新计算 sizeCtl 的大小（ 此时 sizeCtl 为正值，表示扩容阈值 ），完成初始化。&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>节点的 hash &amp;gt;= 0，说明头节点所在的数据结构是链表；hash &amp;lt; 0 并且 属于 TreeBin 类型，说明头节点所在的数据结构是红黑树。&lt;/span>&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(909,33)"/>
+        </g>
+    </g>
+    <g id="248" ed:height="43.5" transform="matrix(1,0,0,1,250,890)" ed:parentid="188" ed:width="45.5">
+        <path d="M0,43.5L45.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">get </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">方法</tspan>
+        </text>
+    </g>
+    <g id="249" ed:height="43.5" transform="matrix(1,0,0,1,250,950)" ed:parentid="188" ed:width="65.5">
+        <path d="M0,43.5L65.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">remove </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">方法</tspan>
+        </text>
+    </g>
+    <g id="251" ed:height="24.5" transform="matrix(1,0,0,1,394,614)" ed:parentid="272" ed:width="103">
+        <path d="M0,24.5L103,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">tabAt 方法</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>Node&amp;lt;K,V&amp;gt; tabAt(Node&amp;lt;K,V&amp;gt;[] tab, int i) ，此函数调用了 Unsafe 对象的方法，本质上是利用反射获取到 tab 数组中下标为 i 的节点。&lt;/span>&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(77,4)"/>
+        </g>
+    </g>
+    <g id="252" ed:height="24.5" transform="matrix(1,0,0,1,524,614)" ed:parentid="251" ed:width="125">
+        <path d="M0,24.5L125,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">casTabAt 方法</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>boolean casTabAt(Node&amp;lt;K,V&amp;gt;[] tab, int i, Node&amp;lt;K,V&amp;gt; c, Node&amp;lt;K,V&amp;gt; v) ，用于比较 tab 数组下标为 i 的节点是否为 c，若为 c，则用 v 交换操作，否则，不进行交换操作。&lt;/span>&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(99,4)"/>
+        </g>
+    </g>
+    <g id="255" ed:height="24.5" transform="matrix(1,0,0,1,250,733)" ed:parentid="188" ed:width="151">
+        <path d="M0,24.5L151,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">*helpTransfer 方法</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>最终调用的是 transfer 方法，控制多个线程（ MAX_RESIZERS 范围内 ）一起进行扩容转移操作。&lt;/span>&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(125,4)"/>
+        </g>
+    </g>
+    <g id="256" ed:height="43.5" transform="matrix(1,0,0,1,250,802)" ed:parentid="188" ed:width="87.5">
+        <path d="M0,43.5L87.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">transfer </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">方法</tspan>
+        </text>
+        <g>
+            <use xlink:href="#attachment" transform="translate(62,14)"/>
+        </g>
+    </g>
+    <g id="258" ed:height="24.5" transform="matrix(1,0,0,1,589,733)" ed:parentid="280" ed:width="115">
+        <path d="M0,24.5L115,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">*addCount 方法</tspan>
+        </text>
+    </g>
+    <g id="262" ed:height="119.5" transform="matrix(1,0,0,1,365,764)" ed:parentid="256" ed:width="887">
+        <path d="M0,119.5L887,119.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">主要流程：计算每个线程每次处理的区间的大小（ 即计算 stride 的值 ）。创建数组长度为 table 长度 2 倍的新数组 newTab。进入 while 循环，根据 i </tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">和 bound 的值进入相应的分支（ 最后一个分支重新计算 bound 和 i 的值，bound 表示要处理的区间的起始下标，i 表示要处理的区间的终止下标 ），</tspan>
+            <tspan y="54.1" x="8" style="white-space:pre">跳出 while 循环。从区间尾部开始，遍历区间中的每一个元素，若为 null，则插入 ForwordingNode 节点进行占位，当其他线程进行其他操作处理到该</tspan>
+            <tspan y="73.1" x="8" style="white-space:pre">元素时会一起帮助扩容；若发现元素的 hash 为 MOVED，则跳过；若不为 null 并且 hash 也不为 MOVED，则先锁定头节点，然后进行链表/红黑树的</tspan>
+            <tspan y="92.1" x="8" style="white-space:pre">拆分并插入到 newTab 下标为 i，i+n 的位置。处理完整个区间后，如果还有其他线程在进行扩容操作则当前线程结束方法，如果全部线程都已扩容完</tspan>
+            <tspan y="111.1" x="8" style="white-space:pre">成。则重新检查整个旧的 table 数组，然后将 newTab 赋给 table 数组同时更新阈值。</tspan>
+        </text>
+    </g>
+    <g id="263" ed:height="43.5" transform="matrix(1,0,0,1,323,890)" ed:parentid="248" ed:width="923">
+        <path d="M0,43.5L923,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">主要流程：调用 spread() 计算 key 的 hashcode 值，如果 table 为 null 或者 table 的长度为 0，直接返回 null。遍历链表/红黑树，若找到相同 key 的节点则</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">返回该节点的值，若找不到则返回 null。</tspan>
+        </text>
+    </g>
+    <g id="264" ed:height="62.5" transform="matrix(1,0,0,1,343,940)" ed:parentid="249" ed:width="914">
+        <path d="M0,62.5L914,62.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">主要流程：如果 key 为 null，直接报 NPE；计算 key 的 hashcode 值，如果 table 为 null 或者 table 的长度为 0，直接返回 null。根据 hashcode 的值获</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">取头节点，若其 hash 为 MOVED，则帮助扩容。若不为 MOVED，则先锁定头节点，遍历该元素所在的链表/红黑树并寻找键值相等的节点，找到则调整链</tspan>
+            <tspan y="54.1" x="8" style="white-space:pre">表指针位置并将该节点返回，若找不到则返回 null。</tspan>
+        </text>
+    </g>
+    <g id="269" ed:height="24.5" transform="matrix(1,0,0,1,272,1409)" ed:parentid="186" ed:width="172">
+        <path d="M0,24.5L172,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">removeAll，retainAll 方法</tspan>
+        </text>
+    </g>
+    <g id="272" ed:height="24.5" transform="matrix(1,0,0,1,250,614)" ed:parentid="188" ed:width="117">
+        <path d="M0,24.5L117,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">Unsafe 常用方法</tspan>
+        </text>
+    </g>
+    <g id="274" ed:height="24.5" transform="matrix(1,0,0,1,676,614)" ed:parentid="252" ed:width="198">
+        <path d="M0,24.5L198,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">compareAndSwapInt 方法</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>unsafe.compareAndSwapInt(this, valueOffset, expect, update)，如果 valueOffset 位置包含的值与 expect 值相同，则更新 valueOffset 位置的值为 update 并返回 true，否则不更新，返回 false。&lt;/span>&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(172,4)"/>
+        </g>
+    </g>
+    <g id="280" ed:height="24.5" transform="matrix(1,0,0,1,428,733)" ed:parentid="255" ed:width="134">
+        <path d="M0,24.5L134,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">*tryPresize 方法</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>在 treeifyBin() 中当链表长度大于 8 但是 table 数组的长度小于 64 时调用到，该方法的作用和 HashMap 中 resize() 一致，在 table 数组长度小于 64 时优先扩容而不是链表树化。&lt;/span>&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(108,4)"/>
+        </g>
+    </g>
+    <g id="289" ed:height="24.5" transform="matrix(1,0,0,1,731,733)" ed:parentid="258" ed:width="226">
+        <path d="M0,24.5L226,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">这三个方法都看不懂是做了什么操作</tspan>
+        </text>
+    </g>
+    <g id="293" ed:height="43.5" transform="matrix(1,0,0,1,135,1640)" ed:parentid="185" ed:width="108.5">
+        <path d="M0,43.5L108.5,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">CopyOnWrite</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">ArrayList</tspan>
+        </text>
+    </g>
+    <g id="295" ed:height="43.5" transform="matrix(1,0,0,1,271,1640)" ed:parentid="293" ed:width="956">
+        <path d="M0,43.5L956,43.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">适用于读多写少的并发场景。CopyOnWriteArrayList 容器允许并发读，读操作是无锁的，性能较高。至于写操作，比如向容器中添加一个元素，则首先将当前</tspan>
+            <tspan y="35.1" x="8" style="white-space:pre">容器复制一份，然后在新副本上执行写操作，结束之后再将原容器的引用指向新容器。</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>优点：&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>采用读写分离方式，读的效率非常高；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>CopyOnWriteArrayList 的迭代器是基于创建时的数据快照的，故数组的增删改不会影响到迭代器。&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>缺点：&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>内存占用高，每次执行写操作都要将原容器拷贝一份，数据量大时，对内存压力较大，可能会引起频繁 GC；&lt;/span>&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>无法保证实时性，写和读分别作用在新老不同容器上，在写操作执行过程中，读不会阻塞但读取到的却是老容器的数据。&lt;/span>&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(930,14)"/>
+        </g>
+    </g>
+    <g id="298" ed:height="24.5" transform="matrix(1,0,0,1,344,283)" ed:parentid="207" ed:width="588">
+        <path d="M0,24.5L588,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">do {} while (index &lt; t.length &amp;&amp; (next = t[index++]) == null) 跳过 table 中不包含节点的元素。</tspan>
+        </text>
+    </g>
+    <g id="301" ed:height="24.5" transform="matrix(1,0,0,1,258,552)" ed:parentid="184" ed:width="169">
+        <path d="M0,24.5L169,24.5" fill="none" stroke="#696969" stroke-linejoin="round"/>
+        <text class="st5">
+            <tspan y="16.1" x="8" style="white-space:pre">高并发下不安全的原因</tspan>
+        </text>
+        <g ed:note="&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>1. 假设线程 1 已经拿到了要修改的节点，若此时让出 cpu，在这期间这个节点被其他线程更改，那么在线程 1 重新获得 cpu 时，它会修改持有的过期的节点并且覆盖之前其他线程的记录，造成了数据丢失；&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>2. 如果多个线程同时检测到键值对数量超过阈值，这样就会发生多个线程同时进行扩容，都在重新计算元素位置以及复制数据，但是最终只有一个线程扩容后的数组会赋给 table，也就是说其他线程的都会丢失，并且各自线程 put 的数据也丢失；&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; &quot;>&lt;span style=&quot; font-family:'微软雅黑';&quot;>*3. java8 之前 HashMap 在高并发环境下会出现环状链表，导致失败。java8 不会出现环状链表。&lt;/span>&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;  font-family:'微软雅黑';&quot;>&lt;br />&lt;/p>&lt;/body>">
+            <use xlink:href="#note" transform="translate(143,4)"/>
+        </g>
+    </g>
+    <symbol id="plus">
+        <path d="M11,6C11,8.8,8.8,11,6,11C3.2,11,1,8.8,1,6C1,3.2,3.2,1,6,1C8.8,1,11,3.2,11,6z" fill="url(#lg3)"/>
+        <path d="M11,6C11,8.8,8.8,11,6,11C3.2,11,1,8.8,1,6C1,3.2,3.2,1,6,1C8.8,1,11,3.2,11,6zM3,6L9,6M6,3L6,9" fill="none" stroke="#46a000" stroke-width="0.7"/>
+    </symbol>
+    <symbol id="minus">
+        <path d="M11,6C11,8.8,8.8,11,6,11C3.2,11,1,8.8,1,6C1,3.2,3.2,1,6,1C8.8,1,11,3.2,11,6z" fill="url(#lg3)"/>
+        <path d="M11,6C11,8.8,8.8,11,6,11C3.2,11,1,8.8,1,6C1,3.2,3.2,1,6,1C8.8,1,11,3.2,11,6zM3,6L9,6" fill="none" stroke="#46a000" stroke-width="0.7"/>
+    </symbol>
+    <g ed:togtopicid="184" transform="translate(232,308)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="185" transform="translate(109,934)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="186" transform="translate(246,1356)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="187" transform="translate(220,1100)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="188" transform="translate(224,787)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="195" transform="translate(189,1813)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="197" transform="translate(250,1725)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="201" transform="translate(222,1596)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="204" transform="translate(573,527)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="206" transform="translate(305,158)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="207" transform="translate(318,264)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="208" transform="translate(304,349)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="209" transform="translate(313,427)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="221" transform="translate(325,487)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="225" transform="translate(299,680)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="226" transform="translate(342,1375)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="231" transform="translate(318,1300)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="237" transform="translate(339,1471)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="240" transform="translate(236,1537)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="248" transform="translate(297,906)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="249" transform="translate(317,965)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="251" transform="translate(498,620)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="252" transform="translate(650,620)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="255" transform="translate(402,739)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="256" transform="translate(339,818)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="258" transform="translate(705,739)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="269" transform="translate(445,1415)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="272" transform="translate(368,620)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="280" transform="translate(563,739)">
+        <use xlink:href="#minus"/>
+    </g>
+    <g ed:togtopicid="293" transform="translate(245,1656)">
+        <use xlink:href="#minus"/>
+    </g>
+</svg>
+</div>
+        <div id="copyright">Created With  <a href="https://www.edrawsoft.com/" target="_blank" title="edrawsoft">MindMaster</a></div>
+      </div>
+    </div>
+    <script>eval(atob('dmFyIG11YT13aW5kb3cubmF2aWdhdG9yLnVzZXJBZ2VudDsNCnZhciB1YT0obXVhLmluZGV4T2YoJ3J2OjExJykrbXVhLmluZGV4T2YoJ01TSUUnKSk+PTA7DQpkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc3ZnLWNvbnRhaW5lcicpLm9uY29udGV4dG1lbnUgPSBmdW5jdGlvbiAoZXZlbnQpIHsNCiAgICBldmVudC5wcmV2ZW50RGVmYXVsdCgpOw0KfQ0KZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3N2Zy1jb250YWluZXInKS5vbm1vdXNlZG93biA9IGZ1bmN0aW9uIChldmVudCkgew0KICAgIGlmKGV2ZW50LndoaWNoID09Myl7DQogICAgICAgIHRoaXMuc3R5bGUuY3Vyc29yID0gJ3BvaW50ZXInOw0KICAgICAgICB0aGlzLm9ubW91c2Vtb3ZlID0gZnVuY3Rpb24gKGV2KSB7DQogICAgICAgICAgICB0aGlzLnNjcm9sbEJ5KC0oZXYubW92ZW1lbnRYKSwgMCk7DQogICAgICAgICAgICB3aW5kb3cuc2Nyb2xsQnkoMCwtKGV2Lm1vdmVtZW50WSkpDQogICAgICAgIH0NCiAgICAgICAgdGhpcy5vbm1vdXNldXAgPSBmdW5jdGlvbiAoKSB7DQogICAgICAgICAgICB0aGlzLnN0eWxlLmN1cnNvciA9ICBudWxsOw0KICAgICAgICAgICAgdGhpcy5vbm1vdXNldXAgPSBudWxsOw0KICAgICAgICAgICAgdGhpcy5vbm1vdXNlbW92ZSA9IG51bGw7DQogICAgICAgIH0NCiAgICB9DQp9DQpOdW1iZXIucHJvdG90eXBlLnRvc3VpdHN2Zz1mdW5jdGlvbiAoKSB7DQogICAgdmFyIG51bT10aGlzLnZhbHVlT2YoKTsNCiAgICBpZihudW0lMT09PTApew0KICAgICAgICByZXR1cm4gbnVtKzAuNQ0KICAgIH1lbHNlIHJldHVybiBudW07DQp9Ow0KTnVtYmVyLnByb3RvdHlwZS5wbHVzej1mdW5jdGlvbigpIHsNCiAgICB2YXIgbnVtPXRoaXMudmFsdWVPZigpOw0KICAgIHJldHVybiBudW08MTA/JzAnK251bTpudW07DQp9Ow0KZnVuY3Rpb24gcGFyc2VEYXRlKG51bSkgew0KICAgIHZhciBkYXRlID0gbmV3IERhdGUobnVtKTsNCiAgICB2YXIgWSA9IGRhdGUuZ2V0RnVsbFllYXIoKSArICctJzsNCiAgICB2YXIgTSA9IChkYXRlLmdldE1vbnRoKCkrMSkucGx1c3ooKSArICctJzsNCiAgICB2YXIgRCA9IGRhdGUuZ2V0RGF0ZSgpLnBsdXN6KCkgKyAnICc7DQogICAgdmFyIGggPSBkYXRlLmdldEhvdXJzKCkucGx1c3ooKSArICc6JzsNCiAgICB2YXIgbW0gPSBkYXRlLmdldE1pbnV0ZXMoKS5wbHVzeigpICsgJzonOw0KICAgIHZhciBzID0gZGF0ZS5nZXRTZWNvbmRzKCkucGx1c3ooKTsNCiAgICByZXR1cm4gWStNK0QraCttbStzOw0KfQ0KLy8tLXByZWRlZmluZWQNCi8vY29tbWVudC0tDQp2YXIgY29tbWVudHM9ZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnZz5nW2VkXFw6Y29tbWVudF0nKTsNCmZ1bmN0aW9uIGdldGN3aChwb3B1cCkgew0KICAgIGRvY3VtZW50LmJvZHkuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3N2ZycpWzBdLmFwcGVuZENoaWxkKHBvcHVwKTsNCiAgICB2YXIgdz1wb3B1cC5nZXRCb3VuZGluZ0NsaWVudFJlY3QoKS53aWR0aDsNCiAgICB2YXIgaD1wb3B1cC5nZXRCb3VuZGluZ0NsaWVudFJlY3QoKS5oZWlnaHQ7DQogICAgcmV0dXJuIFt3LGhdDQp9DQpmb3IodmFyIGk9MDtpPGNvbW1lbnRzLmxlbmd0aDtpKyspew0KICAgIHZhciBwb3B1cD1kb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywnZycpOw0KICAgIHZhciBwb3B1cFI9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdyZWN0Jyk7DQogICAgdmFyIGhvdmVyPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdyZWN0Jyk7DQogICAgdmFyIG9saW5lPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdyZWN0Jyk7DQogICAgaG92ZXIuc2V0QXR0cmlidXRlKCdmaWxsJywnI2NkY2RmZicpOw0KICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgneCcsJzAnKTsNCiAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3knLCcwJyk7DQogICAgaG92ZXIuc2V0QXR0cmlidXRlKCdoZWlnaHQnLCcxNicpOw0KICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnd2lkdGgnLCcxNicpOw0KICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnZmlsbC1vcGFjaXR5JywnMC42Jyk7DQogICAgaG92ZXIuc2V0QXR0cmlidXRlKCd0cmFuc2Zvcm0nLGNvbW1lbnRzW2ldLnF1ZXJ5U2VsZWN0b3IoJ3VzZScpLmdldEF0dHJpYnV0ZSgndHJhbnNmb3JtJykpOw0KICAgIGhvdmVyLnN0eWxlLmRpc3BsYXk9J25vbmUnOw0KICAgIGNvbW1lbnRzW2ldLmFwcGVuZENoaWxkKGhvdmVyKTsNCiAgICB2YXIgYT1KU09OLnBhcnNlKGNvbW1lbnRzW2ldLmdldEF0dHJpYnV0ZSgnZWQ6Y29tbWVudCcpKTsNCiAgICB2YXIgaGVpZ2h0PTA7DQogICAgdmFyIGNhcnI9W107DQogICAgZm9yKHZhciBqPTA7ajxhLmxlbmd0aDtqKyspew0KICAgICAgICB2YXIgc3RhbXA9TnVtYmVyKGFbal0uRGF0ZSkqMTAwMDsNCiAgICAgICAgdmFyIHRpbWU9cGFyc2VEYXRlKHN0YW1wKTsNCiAgICAgICAgdmFyIG5hbWU9YVtqXS5OYW1lOw0KICAgICAgICB2YXIgbWVzc2FnZT1hW2pdLk1lc3NhZ2U7DQogICAgICAgIHZhciBtZXNzYWdlQXJyPW1lc3NhZ2Uuc3BsaXQoL1xuLyk7DQogICAgICAgIHZhciBvPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdnJyk7DQogICAgICAgIHZhciBuPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0ZXh0Jyk7DQogICAgICAgIHZhciB0PWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0ZXh0Jyk7DQogICAgICAgIHZhciBtPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0ZXh0Jyk7DQogICAgICAgIG4uc2V0QXR0cmlidXRlKCd4Jyw1KTsNCiAgICAgICAgbi5zZXRBdHRyaWJ1dGUoJ3knLDEyKTsNCiAgICAgICAgbi5zZXRBdHRyaWJ1dGUoJ2ZpbGwnLCcjMDA2ZWZmJyk7DQogICAgICAgIG4udGV4dENvbnRlbnQ9bmFtZSsnOiAnOw0KICAgICAgICBuLnNldEF0dHJpYnV0ZSgnZm9udC1zaXplJywnMTInKTsNCiAgICAgICAgdC5zZXRBdHRyaWJ1dGUoJ3gnLDIwMCk7DQogICAgICAgIHQuc2V0QXR0cmlidXRlKCd5JywxMik7DQogICAgICAgIHQuc2V0QXR0cmlidXRlKCdmaWxsJywnIzk2OTY5NicpOw0KICAgICAgICB0LnRleHRDb250ZW50PXRpbWU7DQogICAgICAgIHQuc2V0QXR0cmlidXRlKCdmb250LXNpemUnLCcxMCcpOw0KICAgICAgICBtLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJywndHJhbnNsYXRlKDIwLDI3KScpOw0KICAgICAgICBtLnNldEF0dHJpYnV0ZSgnZm9udC1zaXplJywnMTInKTsNCiAgICAgICAgZm9yKHZhciBrPTA7azxtZXNzYWdlQXJyLmxlbmd0aDtrKyspew0KICAgICAgICAgICAgdmFyIHRzPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0c3BhbicpOw0KICAgICAgICAgICAgdHMuc2V0QXR0cmlidXRlKCd4JywnMCcpOw0KICAgICAgICAgICAgdHMuc2V0QXR0cmlidXRlKCd5JyxrKjE2KTsNCiAgICAgICAgICAgIHRzLnRleHRDb250ZW50PW1lc3NhZ2VBcnJba107DQogICAgICAgICAgICBtLmFwcGVuZENoaWxkKHRzKTsNCiAgICAgICAgfQ0KICAgICAgICBvLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJywndHJhbnNsYXRlKDAsJytoZWlnaHQrJyknKTsNCiAgICAgICAgby5hcHBlbmRDaGlsZChuKTsNCiAgICAgICAgby5hcHBlbmRDaGlsZCh0KTsNCiAgICAgICAgby5hcHBlbmRDaGlsZChtKTsNCiAgICAgICAgY2Fyci5wdXNoKG8pOw0KICAgICAgICBwb3B1cC5hcHBlbmRDaGlsZChvKTsNCiAgICAgICAgaGVpZ2h0PShtZXNzYWdlQXJyLmxlbmd0aCsxKSoxNitoZWlnaHQ7DQogICAgfQ0KICAgIHZhciB3YXJyPWdldGN3aChwb3B1cCk7DQogICAgb2xpbmUuc2V0QXR0cmlidXRlKCd4JywnMCcpOw0KICAgIG9saW5lLnNldEF0dHJpYnV0ZSgneScsJzAnKTsNCiAgICB2YXIgb3c9d2FyclswXSsxMC41Ow0KICAgIHZhciBvaD13YXJyWzFdKzM7DQogICAgb2xpbmUuc2V0QXR0cmlidXRlKCd3aWR0aCcsb3cpOw0KICAgIG9saW5lLnNldEF0dHJpYnV0ZSgnaGVpZ2h0JyxvaCk7DQogICAgb2xpbmUuc2V0QXR0cmlidXRlKCdmaWxsJywnd2hpdGUnKTsNCiAgICBvbGluZS5zZXRBdHRyaWJ1dGUoJ3N0cm9rZScsJyM2NTY1NjUnKTsNCiAgICBwb3B1cC5hcHBlbmRDaGlsZChvbGluZSk7DQogICAgdmFyIGw9Y2Fyci5sZW5ndGg7DQogICAgd2hpbGUobC0tKXsNCiAgICAgICAgcG9wdXAuYXBwZW5kQ2hpbGQoY2FycltsXSk7DQogICAgfQ0KICAgIHBvcHVwLm9ubW91c2VvdmVyPWZ1bmN0aW9uICgpIHsNCiAgICAgICAgdGhpcy5zdHlsZS5kaXNwbGF5PSdibG9jayc7DQogICAgfTsNCiAgICBwb3B1cC5vbm1vdXNlb3V0PWZ1bmN0aW9uICgpIHsNCiAgICAgICAgdGhpcy5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOw0KICAgIH07DQogICAgdmFyIGNzPWNvbW1lbnRzW2ldLnF1ZXJ5U2VsZWN0b3IoJ3VzZScpLmdldEF0dHJpYnV0ZSgndHJhbnNmb3JtJykubWF0Y2goL1woKFxTKnxcUypcc1xTKilcKS8pWzFdLnNwbGl0KC8gfCwvKTsNCiAgICB2YXIgcHM9Y29tbWVudHNbaV0ucGFyZW50Tm9kZS5nZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScpOw0KICAgIGlmKHBzLnN1YnN0cigwLDIpID09ICd0cicpew0KICAgICAgICB2YXIgcHBzID0gcHMubWF0Y2goL1woKFxTKnxcUypcc1xTKilcKS8pWzFdLnNwbGl0KC8gfCwvKTsNCiAgICAgICAgdmFyIHg9cGFyc2VGbG9hdChjc1swXSkrcGFyc2VGbG9hdChwcHNbMF0pOw0KICAgICAgICB2YXIgeT1wYXJzZUZsb2F0KHBwc1sxXSk7DQogICAgICAgIHg9eC50b3N1aXRzdmcoKTsNCiAgICAgICAgeT15LnRvc3VpdHN2ZygpOw0KICAgICAgICB2YXIgdHJzdHIgPSAndHJhbnNsYXRlKCcreCsnLCcreSsnKSc7DQogICAgfQ0KICAgIGVsc2UgaWYocHMuc3Vic3RyKDAsMikgPT0gJ21hJyl7DQogICAgICAgIHZhciBwcHMgPSBwcy5tYXRjaCgvKFwtP1xkKyhcLlxkKyk/KVtcLCBdKFwtP1xkKyhcLlxkKyk/KVtcLCBdKFwtP1xkKyhcLlxkKyk/KVtcLCBdKFwtP1xkKyhcLlxkKyk/KVtcLCBdKFwtP1xkKyhcLlxkKyk/KVtcLCBdKFwtP1xkKyhcLlxkKyk/KVwpJC8pOw0KICAgICAgICB2YXIgbWFBcnIgPSBbcGFyc2VGbG9hdChwcHNbMV0pLHBhcnNlRmxvYXQocHBzWzNdKSxwYXJzZUZsb2F0KHBwc1s1XSkscGFyc2VGbG9hdChwcHNbN10pLHBhcnNlRmxvYXQocHBzWzldKSxwYXJzZUZsb2F0KHBwc1sxMV0pXTsNCiAgICAgICAgaWYobWFBcnJbMV0gPT0gMCl7DQogICAgICAgICAgICB2YXIgeCA9IHBhcnNlRmxvYXQoY3NbMF0pOw0KICAgICAgICAgICAgdmFyIHk9IHBhcnNlRmxvYXQoY3NbMV0pKzE2Ow0KICAgICAgICAgICAgdmFyIHgxID0geCAqIG1hQXJyWzBdICsgeSAqIG1hQXJyWzJdICsgbWFBcnJbNF07DQogICAgICAgICAgICB2YXIgeTEgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgIHgxPXgxLnRvc3VpdHN2ZygpOw0KICAgICAgICAgICAgeTE9eTEudG9zdWl0c3ZnKCk7DQogICAgICAgICAgICB2YXIgdHJzdHIgPSAgJ3RyYW5zbGF0ZSgnK3gxKycsJyt5MSsnKSc7DQogICAgICAgIH1lbHNlew0KICAgICAgICAgICAgdmFyIHggPSBwYXJzZUZsb2F0KGNzWzBdKSsxNjsNCiAgICAgICAgICAgIHZhciB5ID0gcGFyc2VGbG9hdChjc1sxXSkrMTY7DQogICAgICAgICAgICB2YXIgeDEgPSB4ICogbWFBcnJbMF0gKyB5ICogbWFBcnJbMl0gKyBtYUFycls0XTsNCiAgICAgICAgICAgIHZhciB5MSA9IHggKiBtYUFyclsxXSArIHkgKiBtYUFyclszXSArIG1hQXJyWzVdOw0KICAgICAgICAgICAgeCA9IHBhcnNlRmxvYXQoY3NbMF0pKzE2Ow0KICAgICAgICAgICAgeSA9IHBhcnNlRmxvYXQoY3NbMV0pOw0KICAgICAgICAgICAgdmFyIHgyID0geCAqIG1hQXJyWzBdICsgeSAqIG1hQXJyWzJdICsgbWFBcnJbNF07DQogICAgICAgICAgICB2YXIgeTIgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgIHZhciBmeCA9IHgxPHgyP3gxLnRvc3VpdHN2ZygpOiB4Mi50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgIHZhciBmeSA9IHkxPnkyP3kxLnRvc3VpdHN2ZygpOiB5Mi50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgIHZhciBvZmZ5ID0gTWF0aC5hYnMoeTEteTIpOw0KICAgICAgICAgICAgdmFyIHRyc3RyID0gICd0cmFuc2xhdGUoJytmeCsnLCcrZnkrJyknOw0KICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgnaGVpZ2h0JyxvZmZ5LnRvU3RyaW5nKCkpOw0KICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgnd2lkdGgnLCcxNicpOw0KICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgneScsKC1vZmZ5KS50b1N0cmluZygpKTsNCiAgICAgICAgICAgIHBvcHVwUi5zZXRBdHRyaWJ1dGUoJ2ZpbGwnLCd0cmFuc3BhcmVudCcpOw0KICAgICAgICAgICAgcG9wdXAuYXBwZW5kQ2hpbGQocG9wdXBSKTsNCiAgICAgICAgfQ0KICAgIH0NCiAgICBwb3B1cC5zZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScsdHJzdHIpOw0KICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgnY29tbWVudCcsJycpOw0KICAgIHBvcHVwLnN0eWxlLmRpc3BsYXk9J25vbmUnOw0KICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgnZWQ6Y29tbWVudGlkJyxjb21tZW50c1tpXS5wYXJlbnROb2RlLmlkKTsNCiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcjc3ZnLWNvbnRhaW5lciA+IHN2ZycpLmFwcGVuZENoaWxkKHBvcHVwKTsNCiAgICBjb21tZW50c1tpXS5vbm1vdXNlb3Zlcj1mdW5jdGlvbiAoKSB7DQogICAgICAgIHZhciBjb21tZW50aWQ9dGhpcy5wYXJlbnROb2RlLmlkOw0KICAgICAgICB0aGlzLnF1ZXJ5U2VsZWN0b3IoJ3JlY3QnKS5zdHlsZS5kaXNwbGF5PSdibG9jayc7DQogICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImdbZWRcXDpjb21tZW50aWQ9JyIrY29tbWVudGlkKyInXVtjb21tZW50XSIpLnN0eWxlLmRpc3BsYXk9J2Jsb2NrJzsNCiAgICB9Ow0KICAgIGNvbW1lbnRzW2ldLm9ubW91c2VvdXQ9ZnVuY3Rpb24gKCkgew0KICAgICAgICB2YXIgY29tbWVudGlkPXRoaXMucGFyZW50Tm9kZS5pZDsNCi8vICAgICAgICB3aW5kb3cuZ2V0U2VsZWN0aW9uKCkucmVtb3ZlQWxsUmFuZ2VzKCk7DQogICAgICAgIHRoaXMucXVlcnlTZWxlY3RvcigncmVjdCcpLnN0eWxlLmRpc3BsYXk9J25vbmUnOw0KICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6Y29tbWVudGlkPSciK2NvbW1lbnRpZCsiJ11bY29tbWVudF0iKS5zdHlsZS5kaXNwbGF5PSdub25lJzsNCiAgICB9DQp9DQovLy0tY29tbWVudA0KLy9ub3RlLS0NCmlmKCF1YSl7DQogICAgdmFyIG5vdGVzPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJ2c+Z1tlZFxcOm5vdGVdJyk7DQogICAgZnVuY3Rpb24gZ2V0d2gocyxwKSB7DQogICAgICAgIHZhciBtYWlucD1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTsNCiAgICAgICAgbWFpbnAuc3R5bGUuY3NzVGV4dD1zOw0KICAgICAgICBtYWlucC5zdHlsZS5kaXNwbGF5PSdpbmxpbmUtYmxvY2snOw0KCQltYWlucC5zdHlsZS5tYXhXaWR0aCA9ICc0MDBweCc7DQoJCW1haW5wLnN0eWxlLndvcmRCcmVhayA9ICdicmVhay1hbGwnOw0KICAgICAgICBtYWlucC5pbm5lckhUTUw9cDsNCiAgICAgICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChtYWlucCk7DQogICAgICAgIHZhciB3PW1haW5wLmNsaWVudFdpZHRoOw0KICAgICAgICB2YXIgaD1tYWlucC5jbGllbnRIZWlnaHQ7DQogICAgICAgIGRvY3VtZW50LmJvZHkucmVtb3ZlQ2hpbGQobWFpbnApOw0KICAgICAgICByZXR1cm4gW3csaF0NCiAgICB9DQogICAgZm9yKHZhciBpPTA7aTxub3Rlcy5sZW5ndGg7aSsrKXsNCiAgICAgICAgdmFyIGE9bm90ZXNbaV0uZ2V0QXR0cmlidXRlKCdlZDpub3RlJyk7DQoJCXZhciBub3RlTG9jayA9IG5vdGVzW2ldLmdldEF0dHJpYnV0ZSgnZWQ6bm90ZWxvY2snKTsNCiAgICAgICAgaWYobm90ZUxvY2sgPT0gJ3RydWUnKXsNCiAgICAgICAgICAgIGNvbnRpbnVlOw0KICAgICAgICB9DQogICAgICAgIHZhciBtYWlucD1hLm1hdGNoKC88Ym9keVtePl0qPiguKik8XC9ib2R5Pi8pWzFdOw0KICAgICAgICB2YXIgbWFpbnM9YS5tYXRjaCgvc3R5bGU9IiguKj8pIi8pWzFdOw0KICAgICAgICB2YXIgb3V0PWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdnJyk7DQogICAgICAgIHZhciBvbGluZT1kb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywncmVjdCcpOw0KICAgICAgICB2YXIgcG9wdXA9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKCdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycsJ2ZvcmVpZ25PYmplY3QnKTsNCiAgICAgICAgdmFyIHBvcHVwUj0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKCdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycsJ3JlY3QnKTsNCiAgICAgICAgdmFyIGhvdmVyPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdyZWN0Jyk7DQogICAgICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnZmlsbCcsJyNjZGNkZmYnKTsNCiAgICAgICAgaG92ZXIuc2V0QXR0cmlidXRlKCd4JywnMCcpOw0KICAgICAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3knLCcwJyk7DQogICAgICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnaGVpZ2h0JywnMTYnKTsNCiAgICAgICAgaG92ZXIuc2V0QXR0cmlidXRlKCd3aWR0aCcsJzE2Jyk7DQogICAgICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnZmlsbC1vcGFjaXR5JywnMC42Jyk7DQogICAgICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJyxub3Rlc1tpXS5xdWVyeVNlbGVjdG9yKCd1c2UnKS5nZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScpKTsNCiAgICAgICAgaG92ZXIuc3R5bGUuZGlzcGxheT0nbm9uZSc7DQogICAgICAgIG5vdGVzW2ldLmFwcGVuZENoaWxkKGhvdmVyKTsNCiAgICAgICAgcG9wdXAuc3R5bGUuY3NzVGV4dD1tYWluczsNCiAgICAgICAgcG9wdXAuaW5uZXJIVE1MPW1haW5wOw0KICAgICAgICB2YXIgd2g9Z2V0d2gobWFpbnMsbWFpbnApOw0KICAgICAgICBwb3B1cC5zZXRBdHRyaWJ1dGUoJ3dpZHRoJyx3aFswXSk7DQogICAgICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgnaGVpZ2h0Jyx3aFsxXSk7DQogICAgICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJywndHJhbnNsYXRlKDgsNCknKTsNCgkJcG9wdXAuc3R5bGUud29yZEJyZWFrID0gJ2JyZWFrLWFsbCc7DQogICAgICAgIHBvcHVwLnN0eWxlLnRleHRBbGlnbj0nbGVmdCc7DQogICAgICAgIG9saW5lLnNldEF0dHJpYnV0ZSgneCcsJzAnKTsNCiAgICAgICAgb2xpbmUuc2V0QXR0cmlidXRlKCd5JywnMCcpOw0KICAgICAgICBvbGluZS5zZXRBdHRyaWJ1dGUoJ3dpZHRoJyx3aFswXSsxNik7DQogICAgICAgIG9saW5lLnNldEF0dHJpYnV0ZSgnaGVpZ2h0Jyx3aFsxXSs4KTsNCiAgICAgICAgb2xpbmUuc2V0QXR0cmlidXRlKCdzdHJva2UnLCcjYTI3YTAwJyk7DQogICAgICAgIG9saW5lLnNldEF0dHJpYnV0ZSgnZmlsbCcsJyNmZmU3OWQnKTsNCiAgICAgICAgb3V0LmFwcGVuZENoaWxkKG9saW5lKTsNCiAgICAgICAgb3V0LmFwcGVuZENoaWxkKHBvcHVwKTsNCiAgICAgICAgb3V0LnNldEF0dHJpYnV0ZSgnbm90ZScsJycpOw0KICAgICAgICBvdXQuc3R5bGUuZGlzcGxheT0nbm9uZSc7DQogICAgICAgIG91dC5zZXRBdHRyaWJ1dGUoJ2VkOm5vdGVpZCcsbm90ZXNbaV0ucGFyZW50Tm9kZS5pZCk7DQogICAgICAgIG91dC5vbm1vdXNlb3Zlcj1mdW5jdGlvbiAoKSB7DQogICAgICAgICAgICB0aGlzLnN0eWxlLmRpc3BsYXk9J2Jsb2NrJzsNCiAgICAgICAgfTsNCiAgICAgICAgb3V0Lm9ubW91c2VvdXQ9ZnVuY3Rpb24gKCkgew0KLy8gICAgICAgIHdpbmRvdy5nZXRTZWxlY3Rpb24gPyB3aW5kb3cuZ2V0U2VsZWN0aW9uKCkucmVtb3ZlUmFuZ2Uod2luZG93LmdldFNlbGVjdGlvbigpLnJlKTpkb2N1bWVudC5zZWxlY3Rpb24uZW1wdHkoKTsNCg0KICAgICAgICAgICAgdGhpcy5zdHlsZS5kaXNwbGF5PSdub25lJzsNCiAgICAgICAgfTsNCiAgICAgICAgdmFyIGNzPW5vdGVzW2ldLnF1ZXJ5U2VsZWN0b3IoJ3VzZScpLmdldEF0dHJpYnV0ZSgndHJhbnNmb3JtJykubWF0Y2goL1woKFxTKnxcUypcc1xTKilcKS8pWzFdLnNwbGl0KC8gfCwvKTsNCiAgICAgICAgdmFyIHBzPW5vdGVzW2ldLnBhcmVudE5vZGUuZ2V0QXR0cmlidXRlKCd0cmFuc2Zvcm0nKTsNCiAgICAgICAgaWYocHMuc3Vic3RyKDAsMikgPT0gJ3RyJyl7DQogICAgICAgICAgICB2YXIgcHBzID0gcHMubWF0Y2goL1woKFxTKnxcUypcc1xTKilcKS8pWzFdLnNwbGl0KC8gfCwvKTsNCiAgICAgICAgICAgIHZhciB4PXBhcnNlRmxvYXQoY3NbMF0pK3BhcnNlRmxvYXQocHBzWzBdKTsNCiAgICAgICAgICAgIHZhciB5PXBhcnNlRmxvYXQocHBzWzFdKTsNCiAgICAgICAgICAgIHg9eC50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgIHk9eS50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgIHZhciB0cnN0ciA9ICd0cmFuc2xhdGUoJyt4KycsJyt5KycpJzsNCiAgICAgICAgfWVsc2UgaWYocHMuc3Vic3RyKDAsMikgPT0gJ21hJyl7DQogICAgICAgICAgICB2YXIgcHBzID0gcHMubWF0Y2goLyhcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylcKSQvKTsNCiAgICAgICAgICAgIHZhciBtYUFyciA9IFtwYXJzZUZsb2F0KHBwc1sxXSkscGFyc2VGbG9hdChwcHNbM10pLHBhcnNlRmxvYXQocHBzWzVdKSxwYXJzZUZsb2F0KHBwc1s3XSkscGFyc2VGbG9hdChwcHNbOV0pLHBhcnNlRmxvYXQocHBzWzExXSldOw0KICAgICAgICAgICAgaWYobWFBcnJbMV0gPT0gMCl7DQogICAgICAgICAgICAgICAgdmFyIHggPSBwYXJzZUZsb2F0KGNzWzBdKTsNCiAgICAgICAgICAgICAgICB2YXIgeSA9IHBhcnNlRmxvYXQoY3NbMV0pKzE2Ow0KICAgICAgICAgICAgICAgIHZhciB4MSA9IHggKiBtYUFyclswXSArIHkgKiBtYUFyclsyXSArIG1hQXJyWzRdOw0KICAgICAgICAgICAgICAgIHZhciB5MSA9IHggKiBtYUFyclsxXSArIHkgKiBtYUFyclszXSArIG1hQXJyWzVdOw0KICAgICAgICAgICAgICAgIHgxPXgxLnRvc3VpdHN2ZygpOw0KICAgICAgICAgICAgICAgIHkxPXkxLnRvc3VpdHN2ZygpOw0KICAgICAgICAgICAgICAgIHZhciB0cnN0ciA9ICAndHJhbnNsYXRlKCcreDErJywnK3kxKycpJzsNCiAgICAgICAgICAgIH1lbHNlew0KICAgICAgICAgICAgICAgIHZhciB4ID0gcGFyc2VGbG9hdChjc1swXSkrMTY7DQogICAgICAgICAgICAgICAgdmFyIHkgPSBwYXJzZUZsb2F0KGNzWzFdKSsxNjsNCiAgICAgICAgICAgICAgICB2YXIgeDEgPSB4ICogbWFBcnJbMF0gKyB5ICogbWFBcnJbMl0gKyBtYUFycls0XTsNCiAgICAgICAgICAgICAgICB2YXIgeTEgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgICAgICB4ID0gcGFyc2VGbG9hdChjc1swXSkrMTY7DQogICAgICAgICAgICAgICAgeSA9IHBhcnNlRmxvYXQoY3NbMV0pOw0KICAgICAgICAgICAgICAgIHZhciB4MiA9IHggKiBtYUFyclswXSArIHkgKiBtYUFyclsyXSArIG1hQXJyWzRdOw0KICAgICAgICAgICAgICAgIHZhciB5MiA9IHggKiBtYUFyclsxXSArIHkgKiBtYUFyclszXSArIG1hQXJyWzVdOw0KICAgICAgICAgICAgICAgIHZhciBmeCA9IHgxPHgyP3gxLnRvc3VpdHN2ZygpOiB4Mi50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgICAgICB2YXIgZnkgPSB5MT55Mj95MS50b3N1aXRzdmcoKTogeTIudG9zdWl0c3ZnKCk7DQoJCQkJdmFyIG9mZnkgPSBNYXRoLmFicyh5MS15Mik7CQkJCQkJCQkJCSAgDQogICAgICAgICAgICAgICAgdmFyIHRyc3RyID0gICd0cmFuc2xhdGUoJytmeCsnLCcrZnkrJyknOw0KICAgICAgICAgICAgICAgIHBvcHVwUi5zZXRBdHRyaWJ1dGUoJ2hlaWdodCcsb2ZmeS50b1N0cmluZygpKTsNCiAgICAgICAgICAgICAgICBwb3B1cFIuc2V0QXR0cmlidXRlKCd3aWR0aCcsJzE2Jyk7DQogICAgICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgneScsKC1vZmZ5KS50b1N0cmluZygpKTsNCiAgICAgICAgICAgICAgICBwb3B1cFIuc2V0QXR0cmlidXRlKCdmaWxsJywndHJhbnNwYXJlbnQnKTsNCiAgICAgICAgICAgICAgICBwb3B1cC5hcHBlbmRDaGlsZChwb3B1cFIpOw0KICAgICAgICAgICAgfQ0KICAgICAgICB9DQogICAgICAgIG91dC5zZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScsdHJzdHIpOw0KICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcjc3ZnLWNvbnRhaW5lciA+IHN2ZycpLmFwcGVuZENoaWxkKG91dCk7DQogICAgICAgIG5vdGVzW2ldLm9ubW91c2VvdmVyPWZ1bmN0aW9uICgpIHsNCiAgICAgICAgICAgIHZhciBub3RlaWQ9dGhpcy5wYXJlbnROb2RlLmlkOw0KICAgICAgICAgICAgdGhpcy5xdWVyeVNlbGVjdG9yKCdyZWN0Jykuc3R5bGUuZGlzcGxheT0nYmxvY2snOw0KICAgICAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOm5vdGVpZD0nIitub3RlaWQrIiddW25vdGVdIikuc3R5bGUuZGlzcGxheT0nYmxvY2snOw0KICAgICAgICB9Ow0KICAgICAgICBub3Rlc1tpXS5vbm1vdXNlb3V0PWZ1bmN0aW9uICgpIHsNCiAgICAgICAgICAgIHZhciBub3RlaWQ9dGhpcy5wYXJlbnROb2RlLmlkOw0KLy8gICAgICAgIHdpbmRvdy5nZXRTZWxlY3Rpb24oKS5yZW1vdmVBbGxSYW5nZXMoKTsNCiAgICAgICAgICAgIHRoaXMucXVlcnlTZWxlY3RvcigncmVjdCcpLnN0eWxlLmRpc3BsYXk9J25vbmUnOw0KICAgICAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOm5vdGVpZD0nIitub3RlaWQrIiddW25vdGVdIikuc3R5bGUuZGlzcGxheT0nbm9uZSc7DQogICAgICAgIH0NCiAgICB9DQp9ZWxzZXsNCiAgICBjb25zb2xlLmxvZygn5oqx5q2J77yMSUXmtY/op4jlmajkuI3mlK/mjIFub3Rl6Kej5p6Q77yM6K+35L2/55So5YW25LuW5YaF5qC45rWP6KeI5Zmo44CC6LCi6LCi77yBJykNCn0NCi8vLS1ub3RlDQovL2h5cGVybGluay0tDQp2YXIgbGlua3M9ZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnZz5nW2VkXFw6aHlwZXJsaW5rXScpOw0KZnVuY3Rpb24gZ2V0bWF4bGVuKGFycixicnIpIHsNCiAgICB2YXIgbD0wOw0KICAgIHZhciBsbD0wOw0KICAgIGZvcih2YXIgaj0wO2o8YXJyLmxlbmd0aDtqKyspew0KICAgICAgICB2YXIgZT1kb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywndGV4dCcpOw0KICAgICAgICBpZighaXNOYU4obGlua2FycltqXSkpew0KICAgICAgICAgICAgZS50ZXh0Q29udGVudD0nUGFnZS0nK2FycltqXTsNCiAgICAgICAgfWVsc2V7DQogICAgICAgICAgICBlLnRleHRDb250ZW50PWFycltqXTsNCiAgICAgICAgfQ0KICAgICAgICBlLnN0eWxlLmZvbnRTaXplPScxMnB4JzsNCiAgICAgICAgZG9jdW1lbnQuYm9keS5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc3ZnJylbMF0uYXBwZW5kQ2hpbGQoZSk7DQogICAgICAgIHZhciBldz1lLmdldEJCb3goKS53aWR0aDsNCiAgICAgICAgZG9jdW1lbnQuYm9keS5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc3ZnJylbMF0ucmVtb3ZlQ2hpbGQoZSk7DQogICAgICAgIHZhciBoPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0ZXh0Jyk7DQogICAgICAgIGgudGV4dENvbnRlbnQ9YnJyW2pdOw0KICAgICAgICBoLnN0eWxlLmZvbnRTaXplPScxMnB4JzsNCiAgICAgICAgaC5zdHlsZS5mb250V2VpZ2h0PSdib2xkJzsNCiAgICAgICAgZG9jdW1lbnQuYm9keS5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc3ZnJylbMF0uYXBwZW5kQ2hpbGQoaCk7DQogICAgICAgIHZhciBodz1oLmdldEJCb3goKS53aWR0aDsNCiAgICAgICAgZG9jdW1lbnQuYm9keS5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc3ZnJylbMF0ucmVtb3ZlQ2hpbGQoaCk7DQogICAgICAgIGw9ZXc+aHc/ZXc6aHc7DQogICAgICAgIGxsPWw+bGw/bDpsbDsNCiAgICB9DQogICAgcmV0dXJuIGxsOw0KfQ0KZm9yKHZhciBpPTA7aTxsaW5rcy5sZW5ndGg7aSsrKXsNCiAgICB2YXIgcG9wdXA9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKCdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycsJ2cnKTsNCiAgICB2YXIgcG9wdXBSPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywncmVjdCcpOw0KICAgIHZhciBob3Zlcj1kb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywncmVjdCcpOw0KICAgIHZhciBkZXNjYXJyPVtdOw0KICAgIHZhciBsaW5rYXJyPVtdOw0KICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnZmlsbCcsJyNjZGNkZmYnKTsNCiAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3gnLCcwJyk7DQogICAgaG92ZXIuc2V0QXR0cmlidXRlKCd5JywnMCcpOw0KICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnaGVpZ2h0JywnMTYnKTsNCiAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3dpZHRoJywnMTYnKTsNCiAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ2ZpbGwtb3BhY2l0eScsJzAuNicpOw0KICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJyxsaW5rc1tpXS5xdWVyeVNlbGVjdG9yKCd1c2UnKS5nZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScpKTsNCiAgICBob3Zlci5zdHlsZS5kaXNwbGF5PSdub25lJzsNCiAgICBsaW5rc1tpXS5hcHBlbmRDaGlsZChob3Zlcik7DQogICAgLy8gY29uc29sZS5sb2cobGlua3NbaV0uZ2V0QXR0cmlidXRlKCdlZDpoeXBlcmxpbmsnKSk7DQogICAgdmFyIGE9SlNPTi5wYXJzZShsaW5rc1tpXS5nZXRBdHRyaWJ1dGUoJ2VkOmh5cGVybGluaycpKTsNCiAgICB2YXIgY3M9bGlua3NbaV0ucXVlcnlTZWxlY3RvcigndXNlJykuZ2V0QXR0cmlidXRlKCd0cmFuc2Zvcm0nKS5tYXRjaCgvXCgoXFMqfFxTKlxzXFMqKVwpLylbMV0uc3BsaXQoLyB8LC8pOw0KICAgIHZhciBwcz1saW5rc1tpXS5wYXJlbnROb2RlLmdldEF0dHJpYnV0ZSgndHJhbnNmb3JtJyk7DQogICAgaWYocHMuc3Vic3RyKDAsMikgPT0gJ3RyJyl7DQogICAgICAgIHZhciBwcHMgPSBwcy5tYXRjaCgvXCgoXFMqfFxTKlxzXFMqKVwpLylbMV0uc3BsaXQoLyB8LC8pOw0KICAgICAgICB2YXIgeD1wYXJzZUZsb2F0KGNzWzBdKStwYXJzZUZsb2F0KHBwc1swXSk7DQogICAgICAgIHZhciB5PXBhcnNlRmxvYXQocHBzWzFdKTsNCiAgICAgICAgeD14LnRvc3VpdHN2ZygpOw0KICAgICAgICB5PXkudG9zdWl0c3ZnKCk7DQogICAgICAgIHZhciB0cnN0ciA9ICd0cmFuc2xhdGUoJyt4KycsJyt5KycpJzsNCiAgICB9ZWxzZSBpZihwcy5zdWJzdHIoMCwyKSA9PSAnbWEnKXsNCiAgICAgICAgdmFyIHBwcyA9IHBzLm1hdGNoKC8oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pXCkkLyk7DQogICAgICAgIHZhciBtYUFyciA9IFtwYXJzZUZsb2F0KHBwc1sxXSkscGFyc2VGbG9hdChwcHNbM10pLHBhcnNlRmxvYXQocHBzWzVdKSxwYXJzZUZsb2F0KHBwc1s3XSkscGFyc2VGbG9hdChwcHNbOV0pLHBhcnNlRmxvYXQocHBzWzExXSldOw0KICAgICAgICBpZihtYUFyclsxXSA9PSAwKXsNCiAgICAgICAgICAgIHZhciB4ID0gcGFyc2VGbG9hdChjc1swXSk7DQogICAgICAgICAgICB2YXIgeSA9IHBhcnNlRmxvYXQoY3NbMV0pKzE2Ow0KICAgICAgICAgICAgdmFyIHgxID0geCAqIG1hQXJyWzBdICsgeSAqIG1hQXJyWzJdICsgbWFBcnJbNF07DQogICAgICAgICAgICB2YXIgeTEgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgIHgxPXgxLnRvc3VpdHN2ZygpOw0KICAgICAgICAgICAgeTE9eTEudG9zdWl0c3ZnKCk7DQogICAgICAgICAgICB2YXIgdHJzdHIgPSAgJ3RyYW5zbGF0ZSgnK3gxKycsJyt5MSsnKSc7DQogICAgICAgIH1lbHNlew0KICAgICAgICAgICAgdmFyIHggPSBwYXJzZUZsb2F0KGNzWzBdKSsxNjsNCiAgICAgICAgICAgIHZhciB5ID0gcGFyc2VGbG9hdChjc1sxXSkrMTY7DQogICAgICAgICAgICB2YXIgeDEgPSB4ICogbWFBcnJbMF0gKyB5ICogbWFBcnJbMl0gKyBtYUFycls0XTsNCiAgICAgICAgICAgIHZhciB5MSA9IHggKiBtYUFyclsxXSArIHkgKiBtYUFyclszXSArIG1hQXJyWzVdOw0KICAgICAgICAgICAgeCA9IHBhcnNlRmxvYXQoY3NbMF0pKzE2Ow0KICAgICAgICAgICAgeSA9IHBhcnNlRmxvYXQoY3NbMV0pOw0KICAgICAgICAgICAgdmFyIHgyID0geCAqIG1hQXJyWzBdICsgeSAqIG1hQXJyWzJdICsgbWFBcnJbNF07DQogICAgICAgICAgICB2YXIgeTIgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgIHZhciBmeCA9IHgxPHgyP3gxLnRvc3VpdHN2ZygpOiB4Mi50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgIHZhciBmeSA9IHkxPnkyP3kxLnRvc3VpdHN2ZygpOiB5Mi50b3N1aXRzdmcoKTsNCgkJCXZhciBvZmZ5ID0gTWF0aC5hYnMoeTEteTIpOwkJCQkJCQkJCQkgIA0KICAgICAgICAgICAgdmFyIHRyc3RyID0gICd0cmFuc2xhdGUoJytmeCsnLCcrZnkrJyknOw0KICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgnaGVpZ2h0JyxvZmZ5LnRvU3RyaW5nKCkpOw0KICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgnd2lkdGgnLCcxNicpOw0KICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgneScsKC1vZmZ5KS50b1N0cmluZygpKTsNCiAgICAgICAgICAgIHBvcHVwUi5zZXRBdHRyaWJ1dGUoJ2ZpbGwnLCd0cmFuc3BhcmVudCcpOw0KICAgICAgICAgICAgcG9wdXAuYXBwZW5kQ2hpbGQocG9wdXBSKTsNCiAgICAgICAgfQ0KICAgIH0NCiAgICB2YXIgYWw9YS5sZW5ndGg7DQogICAgZm9yKHZhciBqPTA7ajxhbDtqKyspew0KICAgICAgICBsaW5rYXJyLnB1c2goYVtqXS5saW5rKTsNCiAgICAgICAgZGVzY2Fyci5wdXNoKGFbal0uZGVzYyk7DQogICAgfQ0KICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJyx0cnN0cik7DQogICAgdmFyIG1heD1nZXRtYXhsZW4obGlua2FycixkZXNjYXJyKTsNCiAgICBmb3IodmFyIGs9MDtrPGFsO2srKyl7DQogICAgICAgIHZhciBjPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdhJyk7DQogICAgICAgIHZhciBkPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdyZWN0Jyk7DQogICAgICAgIHZhciBlPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0ZXh0Jyk7DQogICAgICAgIHZhciBmPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0ZXh0Jyk7DQogICAgICAgIGlmKGlzTmFOKGxpbmthcnJba10pKXsNCiAgICAgICAgICAgIGMuc2V0QXR0cmlidXRlTlMoImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiwgInhsaW5rIiwgImh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiKTsNCiAgICAgICAgICAgIGMuc2V0QXR0cmlidXRlTlMoImh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiLCAiaHJlZiIsIGxpbmthcnJba10pOw0KICAgICAgICAgICAgYy5zZXRBdHRyaWJ1dGUoJ3RhcmdldCcsJ19ibGFuaycpOw0KICAgICAgICAgICAgZS50ZXh0Q29udGVudD1saW5rYXJyW2tdOw0KICAgICAgICB9ZWxzZXsNCiAgICAgICAgICAgIGUudGV4dENvbnRlbnQ9J1BhZ2UtJytsaW5rYXJyW2tdOw0KICAgICAgICAgICAgYy5zZXRBdHRyaWJ1dGVOUygiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciLCAieGxpbmsiLCAiaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIpOw0KICAgICAgICAgICAgYy5zZXRBdHRyaWJ1dGVOUygiaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIsICJocmVmIiwgIiMiK2xpbmthcnJba10pOw0KICAgICAgICB9DQogICAgICAgIGQuc2V0QXR0cmlidXRlKCd3aWR0aCcsbWF4KzEwKTsNCiAgICAgICAgZC5zZXRBdHRyaWJ1dGUoJ2hlaWdodCcsJzMzJyk7DQogICAgICAgIGQuc2V0QXR0cmlidXRlKCdzdHJva2UnLCcjOTk5OTk5Jyk7DQogICAgICAgIGQuc2V0QXR0cmlidXRlKCdmaWxsJywnd2hpdGUnKTsNCiAgICAgICAgZC5zZXRBdHRyaWJ1dGUoJ3knLDMzKmspOw0KICAgICAgICBmLnRleHRDb250ZW50PWRlc2NhcnJba107DQogICAgICAgIGYuc3R5bGUuZm9udFNpemU9JzEycHgnOw0KICAgICAgICBmLnN0eWxlLmZvbnRXZWlnaHQ9J2JvbGQnOw0KICAgICAgICBmLnNldEF0dHJpYnV0ZSgneCcsNSk7DQogICAgICAgIGYuc2V0QXR0cmlidXRlKCd5JywzMyprKzEyKTsNCiAgICAgICAgZS5zdHlsZS5mb250U2l6ZT0nMTJweCc7DQogICAgICAgIGUuc2V0QXR0cmlidXRlKCd5JywzMyprKzI4KTsNCiAgICAgICAgZS5zZXRBdHRyaWJ1dGUoJ3gnLDUpOw0KICAgICAgICBjLmFwcGVuZENoaWxkKGQpOw0KICAgICAgICBjLmFwcGVuZENoaWxkKGYpOw0KICAgICAgICBjLmFwcGVuZENoaWxkKGUpOw0KICAgICAgICBjLm9ubW91c2VvdmVyPWZ1bmN0aW9uICgpIHsNCiAgICAgICAgICAgIHRoaXMucXVlcnlTZWxlY3RvcigncmVjdCcpLnN0eWxlLmZpbGw9JyNlMWUxZmYnDQogICAgICAgIH07DQogICAgICAgIGMub25tb3VzZW91dD1mdW5jdGlvbiAoKSB7DQogICAgICAgICAgICB0aGlzLnF1ZXJ5U2VsZWN0b3IoJ3JlY3QnKS5zdHlsZS5maWxsPSd3aGl0ZScNCiAgICAgICAgfTsNCiAgICAgICAgcG9wdXAuYXBwZW5kQ2hpbGQoYyk7DQogICAgfQ0KICAgIHBvcHVwLnN0eWxlLmRpc3BsYXk9J25vbmUnOw0KICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgnaHlwZXJsaW5rJywnJyk7DQogICAgcG9wdXAuc2V0QXR0cmlidXRlKCdlZDpsaW5raWQnLGxpbmtzW2ldLnBhcmVudE5vZGUuaWQpOw0KICAgIHBvcHVwLm9ubW91c2VvdmVyPWZ1bmN0aW9uICgpIHsNCiAgICAgICAgdGhpcy5zdHlsZS5kaXNwbGF5PSdibG9jayc7DQogICAgfTsNCiAgICBwb3B1cC5vbmNsaWNrPWZ1bmN0aW9uICgpIHsNCiAgICAgICAgdGhpcy5zdHlsZS5kaXNwbGF5PSdub25lJzsNCiAgICB9Ow0KICAgIHBvcHVwLm9ubW91c2VvdXQ9ZnVuY3Rpb24gKCkgew0KICAgICAgICB0aGlzLnN0eWxlLmRpc3BsYXk9J25vbmUnOw0KICAgIH07DQogICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI3N2Zy1jb250YWluZXIgPiBzdmcnKS5hcHBlbmRDaGlsZChwb3B1cCk7DQogICAgbGlua3NbaV0ub25tb3VzZW92ZXI9ZnVuY3Rpb24gKCkgew0KICAgICAgICB2YXIgbGlua2lkPXRoaXMucGFyZW50Tm9kZS5pZDsNCiAgICAgICAgdGhpcy5xdWVyeVNlbGVjdG9yKCdyZWN0Jykuc3R5bGUuZGlzcGxheT0nYmxvY2snOw0KICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6bGlua2lkPSciK2xpbmtpZCsiJ11baHlwZXJsaW5rXSIpLnN0eWxlLmRpc3BsYXk9J2Jsb2NrJzsNCiAgICB9DQogICAgbGlua3NbaV0ub25tb3VzZW91dD1mdW5jdGlvbiAoKSB7DQogICAgICAgIHZhciBsaW5raWQ9dGhpcy5wYXJlbnROb2RlLmlkOw0KICAgICAgICB0aGlzLnF1ZXJ5U2VsZWN0b3IoJ3JlY3QnKS5zdHlsZS5kaXNwbGF5PSdub25lJzsNCiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOmxpbmtpZD0nIitsaW5raWQrIiddW2h5cGVybGlua10iKS5zdHlsZS5kaXNwbGF5PSdub25lJzsNCiAgICB9DQp9DQovLy0taHlwZXJsaW5rDQovL2luaXRpYWxpemUtLQ0KdmFyIHNoYXBlPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJ2dbZWRcXDp0b2d0b3BpY2lkXScpOw0KdmFyIG1JZD1kb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCdnW2VkXFw6dG9waWN0eXBlXScpOw0KdmFyIGRhdGFUcmVlPXt9Ow0KdmFyIGV4dHJhUmVsYT17fTsNCnZhciBjaGVja0lEPScnOw0KZm9yKHZhciBpPTA7aTxtSWQubGVuZ3RoO2krKyl7DQogICAgdmFyIHR5cGU9bUlkW2ldLmdldEF0dHJpYnV0ZSgnZWQ6dG9waWN0eXBlJyk7DQogICAgdmFyIHNpZD1tSWRbaV0uaWQ7DQogICAgaWYodHlwZSE9PSdjYWxsb3V0Jyl7DQogICAgICAgIGluaXQoc2lkLGRhdGFUcmVlKQ0KICAgIH0NCn0NCmZ1bmN0aW9uIGluaXQoaWQsIG9iaikgew0KICAgIHZhciBjaGlsZHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJnW2VkXFw6cGFyZW50aWQ9JyIgKyBpZCArICInXTpub3QoW2VkXFw6dG9waWN0eXBlXSkiKTsNCiAgICB2YXIgY2FsbHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJnW2VkXFw6cGFyZW50aWQ9JyIgKyBpZCArICInXVtlZFxcOnRvcGljdHlwZV0iKTsNCiAgICB2YXIgc3VtbWFyeSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoInBhdGhbZWRcXDpwYXJlbnRpZCo9JyIgKyBpZCArICInXVtlZFxcOnR5cGU9J3N1bW1hcnknXSIpOw0KICAgIHZhciBib3VuZGFyeT0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgicGF0aFtlZFxcOnBhcmVudGlkKj0nIiArIGlkICsgIiddW2VkXFw6dHlwZT0nYm91bmRhcnknXSIpOw0KICAgIHZhciByZWxhZnJvbT1kb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJnW2VkXFw6ZnJvbWlkKj0nIiArIGlkICsgIiddW2VkXFw6dHlwZT0ncmVsYXRpb24nXSIpOw0KICAgIHZhciByZWxhdG89ZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgiZ1tlZFxcOnRvaWQqPSciICsgaWQgKyAiJ11bZWRcXDp0eXBlPSdyZWxhdGlvbiddIik7DQogICAgb2JqWyJtIiArIGlkXSA9IHt9Ow0KICAgIHZhciB0eXBlID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoaWQpLmdldEF0dHJpYnV0ZSgnZWQ6dG9waWN0eXBlJyk7DQogICAgdmFyIGl3PWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGlkKS5nZXRBdHRyaWJ1dGUoJ2VkOndpZHRoJyk7DQogICAgdmFyIGloPWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGlkKS5nZXRBdHRyaWJ1dGUoJ2VkOmhlaWdodCcpOw0KICAgIGlmICh0eXBlKSB7DQogICAgICAgIG9ialsibSIgKyBpZF0udHlwZSA9IHR5cGU7DQogICAgfQ0KICAgIGlmKGl3JiZpaCl7DQogICAgICAgIG9ialsibSIgKyBpZF0ud2lkdGggPWl3Ow0KICAgICAgICBvYmpbIm0iICsgaWRdLmhlaWdodCA9aWg7DQogICAgfQ0KICAgIGlmIChyZWxhZnJvbS5sZW5ndGggIT09IDApIHsNCiAgICAgICAgb2JqWyJtIiArIGlkXS5yZWxhZnJvbSA9IHt9Ow0KICAgICAgICBmb3IgKHZhciBpID0gMDsgaSA8IHJlbGFmcm9tLmxlbmd0aDsgaSsrKSB7DQogICAgICAgICAgICB2YXIgaW5kZXhpZCA9IHJlbGFmcm9tW2ldLmlkOw0KICAgICAgICAgICAgdmFyIHRvaWQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChpbmRleGlkKS5nZXRBdHRyaWJ1dGUoJ2VkOnRvaWQnKTsNCiAgICAgICAgICAgIGlmIChleHRyYVJlbGFbaW5kZXhpZF0gPT09IHVuZGVmaW5lZCkgew0KICAgICAgICAgICAgICAgIGV4dHJhUmVsYVtpbmRleGlkXSA9IHsNCiAgICAgICAgICAgICAgICAgICAgaWQ6IGluZGV4aWQsDQogICAgICAgICAgICAgICAgICAgIGZyb21pZDogaWQsDQogICAgICAgICAgICAgICAgICAgIHRvaWQ6IHRvaWQsDQogICAgICAgICAgICAgICAgICAgIGlzQzogZmFsc2UNCiAgICAgICAgICAgICAgICB9Ow0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgb2JqWyJtIiArIGlkXS5yZWxhZnJvbVtpbmRleGlkXT17fTsNCiAgICAgICAgICAgIG9ialsibSIgKyBpZF0ucmVsYWZyb20uZGlzcGxheT1kb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCkuc3R5bGUuZGlzcGxheSAhPT0gJ25vbmUnPydibG9jayc6J25vbmUnOw0KICAgICAgICB9DQogICAgfQ0KICAgIGlmIChyZWxhdG8ubGVuZ3RoICE9PSAwKSB7DQogICAgICAgIG9ialsibSIgKyBpZF0ucmVsYXRvID0ge307DQogICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgcmVsYXRvLmxlbmd0aDsgaSsrKSB7DQogICAgICAgICAgICB2YXIgaW5kZXhpZD1yZWxhdG9baV0uaWQ7DQogICAgICAgICAgICB2YXIgZnJvbWlkPWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGluZGV4aWQpLmdldEF0dHJpYnV0ZSgnZWQ6ZnJvbWlkJyk7DQogICAgICAgICAgICBpZihleHRyYVJlbGFbaW5kZXhpZF0gPT09IHVuZGVmaW5lZCl7DQogICAgICAgICAgICAgICAgZXh0cmFSZWxhW2luZGV4aWRdPXsNCiAgICAgICAgICAgICAgICAgICAgaWQ6aW5kZXhpZCwNCiAgICAgICAgICAgICAgICAgICAgZnJvbWlkOmZyb21pZCwNCiAgICAgICAgICAgICAgICAgICAgdG9pZDppZCwNCiAgICAgICAgICAgICAgICAgICAgaXNDOmZhbHNlDQogICAgICAgICAgICAgICAgfTsNCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIG9ialsibSIgKyBpZF0ucmVsYXRvW2luZGV4aWRdPXt9Ow0KICAgICAgICAgICAgb2JqWyJtIiArIGlkXS5yZWxhdG8uZGlzcGxheT1kb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCkuc3R5bGUuZGlzcGxheSAhPT0gJ25vbmUnPydibG9jayc6J25vbmUnOw0KICAgICAgICB9DQogICAgfQ0KICAgIGlmIChjaGlsZHMubGVuZ3RoICE9PSAwKSB7DQogICAgICAgIG9ialsibSIgKyBpZF0uY2hpbGQgPSB7fTsNCiAgICAgICAgaWYgKGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImdbZWRcXDp0b2d0b3BpY2lkPSciICsgaWQgKyAiJ10iKSkgew0KICAgICAgICAgICAgLy8gY29uc29sZS5sb2coZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOnRvZ3RvcGljaWQ9JyIgKyBpZCArICInXSIpLmNoaWxkTm9kZXNbMF0uZ2V0QXR0cmlidXRlKCd4bGluazpocmVmJykpOw0KICAgICAgICAgICAgdmFyIHRvZyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImdbZWRcXDp0b2d0b3BpY2lkPSciICsgaWQgKyAiJ10iKS5nZXRFbGVtZW50c0J5VGFnTmFtZSgndXNlJylbMF0uZ2V0QXR0cmlidXRlKCd4bGluazpocmVmJykuc2xpY2UoMSk7DQogICAgICAgICAgICBvYmpbIm0iICsgaWRdLnRvZ3R5cGUgPSB0b2c7DQogICAgICAgIH0NCiAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBjaGlsZHMubGVuZ3RoOyBpKyspIHsNCiAgICAgICAgICAgIHZhciBjaWQgPSBjaGlsZHNbaV0uaWQ7DQogICAgICAgICAgICBpbml0KGNpZCwgb2JqWyJtIiArIGlkXS5jaGlsZCk7DQogICAgICAgIH0NCiAgICB9DQogICAgaWYgKGNhbGxzLmxlbmd0aCAhPT0gMCkgew0KICAgICAgICBvYmpbIm0iICsgaWRdLmNhbGwgPSB7fTsNCiAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBjYWxscy5sZW5ndGg7IGkrKykgew0KICAgICAgICAgICAgdmFyIGNpZCA9IGNhbGxzW2ldLmlkOw0KICAgICAgICAgICAgaW5pdChjaWQsIG9ialsibSIgKyBpZF0uY2FsbCk7DQogICAgICAgIH0NCiAgICB9DQogICAgaWYgKGJvdW5kYXJ5Lmxlbmd0aCAhPT0gMCkgew0KICAgICAgICBvYmpbIm0iICsgaWRdLmJvdW5kYXJ5ID0ge307DQogICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgYm91bmRhcnkubGVuZ3RoOyBpKyspIHsNCiAgICAgICAgICAgIHZhciBjaWQgPWJvdW5kYXJ5W2ldLmlkOw0KICAgICAgICAgICAgaW5pdChjaWQsIG9ialsibSIgKyBpZF0uYm91bmRhcnkpOw0KICAgICAgICB9DQogICAgfQ0KICAgIGlmIChzdW1tYXJ5Lmxlbmd0aCAhPT0gMCkgew0KICAgICAgICBvYmpbIm0iICsgaWRdLnN1bW1hcnkgPSB7fTsNCiAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBzdW1tYXJ5Lmxlbmd0aDsgaSsrKSB7DQogICAgICAgICAgICB2YXIgY2lkID0gc3VtbWFyeVtpXS5pZDsNCiAgICAgICAgICAgIGluaXQoY2lkLCBvYmpbIm0iICsgaWRdLnN1bW1hcnkpOw0KICAgICAgICB9DQogICAgfQ0KfQ0KLy8tLWluaXRpYWxpemUNCi8vdG9nZ2xlZGlzcGxheS0tDQp2YXIgY2hhaW5BcnI9W107DQpmdW5jdGlvbiBnZXRjaGFpbihpZCl7DQogICAgY2hhaW5BcnIudW5zaGlmdCgnbScraWQpOw0KICAgIHZhciBwYXJlbnQ9ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoaWQpLmdldEF0dHJpYnV0ZSgnZWQ6cGFyZW50aWQnKTsNCiAgICBpZighcGFyZW50KXsNCiAgICAgICAgcmV0dXJuOw0KICAgIH0NCglpZihwYXJlbnQubWF0Y2goL1wsLykpew0KICAgICAgICBwYXJlbnQgPSBwYXJlbnQubWF0Y2goL1xkKyg/PVwsKS8pWzBdDQogICAgfQ0KICAgIGdldGNoYWluKHBhcmVudCk7DQp9DQpmdW5jdGlvbiBnZXRvYmooaWQpIHsNCiAgICBjaGFpbkFycj1bXTsNCiAgICBnZXRjaGFpbihpZCk7DQogICAgdmFyIG1haW49Y2hhaW5BcnJbMF07DQogICAgaWYoY2hhaW5BcnIubGVuZ3RoPjEpew0KICAgICAgICB2YXIgb2JqPWRhdGFUcmVlW21haW5dOw0KICAgICAgICAvLyBjb25zb2xlLmxvZyhjaGFpbkFycik7DQogICAgICAgIGZvcih2YXIgaT0xO2k8Y2hhaW5BcnIubGVuZ3RoO2krKykgew0KICAgICAgICAgICAgdmFyIGEgPSBjaGFpbkFycltpXTsNCiAgICAgICAgICAgIGZvcih2YXIgaj0wO2o8T2JqZWN0LmtleXMob2JqKS5sZW5ndGg7aisrKXsNCiAgICAgICAgICAgICAgICB2YXIgY29iaj0gb2JqW09iamVjdC5rZXlzKG9iailbal1dW2FdOw0KICAgICAgICAgICAgICAgIGlmKGNvYmopew0KICAgICAgICAgICAgICAgICAgICBvYmo9Y29iajsNCiAgICAgICAgICAgICAgICAgICAgY29udGludWUNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICAgICAgcmV0dXJuIG9iag0KICAgIH1lbHNlew0KICAgICAgICB2YXIgb2JqPWRhdGFUcmVlW21haW5dOw0KICAgICAgICByZXR1cm4gb2JqDQogICAgfQ0KDQp9DQpmb3IodmFyIGk9MDtpPHNoYXBlLmxlbmd0aDtpKyspew0KICAgIHNoYXBlW2ldLm9uY2xpY2s9ZnVuY3Rpb24gKCkgew0KICAgICAgICB2YXIgaWQ9TnVtYmVyKHRoaXMuZ2V0QXR0cmlidXRlKCdlZDp0b2d0b3BpY2lkJykpOw0KICAgICAgICB2YXIgb2JqPWdldG9iaihpZCk7DQoNCiAgICAgICAgdmFyIHR5cGU9b2JqLnRvZ3R5cGU9PT0nbWludXMnPydwbHVzJzonbWludXMnOw0KICAgICAgICB2YXIgZGlzcGxheT1vYmoudG9ndHlwZT09PSdtaW51cyc/J25vbmUnOidibG9jayc7DQogICAgICAgIHRoaXMuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3VzZScpWzBdLnNldEF0dHJpYnV0ZSgneGxpbms6aHJlZicsJyMnK3R5cGUpOw0KICAgICAgICBvYmoudG9ndHlwZT10eXBlOw0KICAgICAgICBjaGVja0lEPW9iajsNCg0KICAgICAgICB1dGQob2JqLGlkLGRpc3BsYXkpOw0KICAgICAgICBleHRyYVJlbGFGaW4oKTsNCiAgICB9DQp9DQpmdW5jdGlvbiB1dGQob2JqLGlkLHNob3csb2MpIHsNCg0KICAgIHZhciBwc2hvdz1kb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCkuc3R5bGUuZGlzcGxheSE9PSAnbm9uZSc/J2Jsb2NrJzonbm9uZSc7DQogICAgaWYgKG9iai5yZWxhZnJvbSl7DQogICAgICAgIGlmKG9iai5yZWxhZnJvbS5kaXNwbGF5IT09IHBzaG93KXsNCiAgICAgICAgICAgIHZhciByZWxhZnJvbXM9T2JqZWN0LmtleXMob2JqLnJlbGFmcm9tKTsNCiAgICAgICAgICAgIHJlbGFmcm9tcy5zcGxpY2UocmVsYWZyb21zLmluZGV4T2YoJ2Rpc3BsYXknKSwxKTsNCiAgICAgICAgICAgIGZvcih2YXIgaz0wO2s8cmVsYWZyb21zLmxlbmd0aDtrKyspew0KICAgICAgICAgICAgICAgIHZhciBkPXJlbGFmcm9tc1trXTsNCiAgICAgICAgICAgICAgICBleHRyYVJlbGFbZF0uaXNDPXRydWU7DQogICAgICAgICAgICB9DQogICAgICAgICAgICBvYmoucmVsYWZyb20uZGlzcGxheSA9IHBzaG93Ow0KICAgICAgICB9DQogICAgfQ0KICAgIGlmIChvYmoucmVsYXRvKXsNCiAgICAgICAgaWYob2JqLnJlbGF0by5kaXNwbGF5IT09IHBzaG93KXsNCiAgICAgICAgICAgIHZhciByZWxhdG9zPU9iamVjdC5rZXlzKG9iai5yZWxhdG8pOw0KICAgICAgICAgICAgcmVsYXRvcy5zcGxpY2UocmVsYXRvcy5pbmRleE9mKCdkaXNwbGF5JyksMSk7DQogICAgICAgICAgICBmb3IodmFyIGs9MDtrPHJlbGF0b3MubGVuZ3RoO2srKyl7DQogICAgICAgICAgICAgICAgdmFyIGQ9cmVsYXRvc1trXTsNCiAgICAgICAgICAgICAgICBleHRyYVJlbGFbZF0uaXNDPXRydWU7DQogICAgICAgICAgICB9DQogICAgICAgICAgICBvYmoucmVsYXRvLmRpc3BsYXkgPSBwc2hvdzsNCiAgICAgICAgfQ0KICAgIH0NCiAgICBpZihvYmouY2FsbCl7DQogICAgICAgIHZhciBjYWxscz1PYmplY3Qua2V5cyhvYmouY2FsbCk7DQogICAgICAgIGlmKGNoZWNrSUQhPT1vYmopew0KICAgICAgICAgICAgZm9yKHZhciBpPTA7aSA8IGNhbGxzLmxlbmd0aDtpKyspew0KICAgICAgICAgICAgICAgIHZhciBhPWNhbGxzW2ldLnNsaWNlKDEpOw0KICAgICAgICAgICAgICAgIHZhciBiPW9iai5jYWxsW2NhbGxzW2ldXTsNCiAgICAgICAgICAgICAgICB2YXIgYz1iLnRvZ3R5cGU7DQogICAgICAgICAgICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoYSkuc3R5bGUuZGlzcGxheT1zaG93Ow0KICAgICAgICAgICAgICAgIGlmIChiLnJlbGFmcm9tJiYhYyl7DQogICAgICAgICAgICAgICAgICAgIGlmKGIucmVsYWZyb20uZGlzcGxheSE9PSBzaG93KXsNCiAgICAgICAgICAgICAgICAgICAgICAgIHZhciByZWxhZnJvbXM9T2JqZWN0LmtleXMoYi5yZWxhZnJvbSk7DQogICAgICAgICAgICAgICAgICAgICAgICByZWxhZnJvbXMuc3BsaWNlKHJlbGFmcm9tcy5pbmRleE9mKCdkaXNwbGF5JyksMSk7DQogICAgICAgICAgICAgICAgICAgICAgICBmb3IodmFyIGs9MDtrPHJlbGFmcm9tcy5sZW5ndGg7aysrKXsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB2YXIgZD1yZWxhZnJvbXNba107DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgZXh0cmFSZWxhW2RdLmlzQz10cnVlOw0KICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICAgICAgYi5yZWxhZnJvbS5kaXNwbGF5ID0gc2hvdzsNCiAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBpZiAoYi5yZWxhdG8mJiFjKXsNCiAgICAgICAgICAgICAgICAgICAgaWYoYi5yZWxhdG8uZGlzcGxheSE9PSBzaG93KXsNCiAgICAgICAgICAgICAgICAgICAgICAgIHZhciByZWxhdG9zPU9iamVjdC5rZXlzKGIucmVsYXRvKTsNCiAgICAgICAgICAgICAgICAgICAgICAgIHJlbGF0b3Muc3BsaWNlKHJlbGF0b3MuaW5kZXhPZignZGlzcGxheScpLDEpOw0KICAgICAgICAgICAgICAgICAgICAgICAgZm9yKHZhciBrPTA7azxyZWxhdG9zLmxlbmd0aDtrKyspew0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIHZhciBkPXJlbGF0b3Nba107DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgZXh0cmFSZWxhW2RdLmlzQz10cnVlOw0KICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICAgICAgYi5yZWxhdG8uZGlzcGxheSA9IHNob3c7DQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgaWYoYyl7DQogICAgICAgICAgICAgICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImdbZWRcXDp0b2d0b3BpY2lkPSciK2ErIiddIikuc3R5bGUuZGlzcGxheT1zaG93Ow0KICAgICAgICAgICAgICAgICAgICBpZihjPT09J21pbnVzJyl7DQogICAgICAgICAgICAgICAgICAgICAgICB1dGQoYixhLHNob3cpDQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgaWYgKChiLmNhbGx8fGIuYm91bmRhcnl8fGIuc3VtbWFyeSkmJmM9PT0ncGx1cycpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgIHV0ZChiLGEsc2hvdyx0cnVlKQ0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIGlmKGIuY2FsbCYmIWMpIHsNCiAgICAgICAgICAgICAgICAgICAgdXRkKGIsYSxzaG93LHRydWUpDQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIGlmIChiLnN1bW1hcnkmJiFjKSB7DQogICAgICAgICAgICAgICAgICAgIHV0ZChiLGEsc2hvdykNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgaWYgKGIuYm91bmRhcnkmJiFjKSB7DQogICAgICAgICAgICAgICAgICAgIHV0ZChiLGEsc2hvdykNCiAgICAgICAgICAgICAgICB9DQoNCiAgICAgICAgICAgIH0NCiAgICAgICAgfQ0KICAgIH0NCiAgICBpZihvYmouc3VtbWFyeSl7DQogICAgICAgIHZhciBzdW1tYXJ5cz1PYmplY3Qua2V5cyhvYmouc3VtbWFyeSk7DQogICAgICAgIGlmKChjaGVja0lEIT09b2JqJiYob2JqLnRvZ3R5cGU9PT0nbWludXMnfHwhb2JqLnRvZ3R5cGUpKXx8Y2hlY2tJRD09PW9iail7DQogICAgICAgICAgICBmb3IodmFyIGk9MDtpPHN1bW1hcnlzLmxlbmd0aDtpKyspew0KICAgICAgICAgICAgICAgIHZhciBhPXN1bW1hcnlzW2ldLnNsaWNlKDEpOw0KCQkJCXZhciBvc3AgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChhKS5nZXRBdHRyaWJ1dGUoJ2VkOnBhcmVudGlkJyk7DQogICAgICAgICAgICAgICAgaWYob3NwLm1hdGNoKC9cLC8pKXsNCiAgICAgICAgICAgICAgICAgICAgdmFyIG9zcGEgPSBvc3Auc3BsaXQoJywnKTsNCiAgICAgICAgICAgICAgICAgICAgdmFyIG9zcEw9MDsNCg0KICAgICAgICAgICAgICAgICAgICBmb3IodmFyIGo9MDtqPG9zcGEubGVuZ3RoO2orKyl7DQogICAgICAgICAgICAgICAgICAgICAgICBpZihzaG93ID09ICdub25lJyl7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQob3NwYVtqXSkuc3R5bGUuZGlzcGxheSAhPSAnbm9uZScpew0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9ZWxzZXsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgb3NwTCsrOw0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgIH1lbHNlew0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZihkb2N1bWVudC5nZXRFbGVtZW50QnlJZChhKS5zdHlsZS5kaXNwbGF5ICE9ICdub25lJyl7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfWVsc2V7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBvc3BMKys7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgIH0NCg0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgIGlmKG9zcEwgIT09IG9zcGEubGVuZ3RoKXsNCiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlOw0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIHZhciBiPW9iai5zdW1tYXJ5W3N1bW1hcnlzW2ldXTsNCiAgICAgICAgICAgICAgICAvLyBjb25zb2xlLmxvZyhhKTsNCiAgICAgICAgICAgICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChhKS5zdHlsZS5kaXNwbGF5PXNob3c7DQovLyAgICAgICAgICAgICAgICBpZihjKXsNCi8vICAgICAgICAgICAgICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6dG9ndG9waWNpZD0nIithKyInXSIpLnN0eWxlLmRpc3BsYXk9c2hvdzsNCi8vICAgICAgICAgICAgICAgICAgICBpZihjPT09J21pbnVzJyl7DQovLyAgICAgICAgICAgICAgICAgICAgICAgIHV0ZChiLHNob3cpDQovLyAgICAgICAgICAgICAgICAgICAgfQ0KLy8gICAgICAgICAgICAgICAgICAgIGlmIChiLmNhbGwmJmM9PT0ncGx1cycpIHsNCi8vICAgICAgICAgICAgICAgICAgICAgICAgdXRkKGIsc2hvdyx0cnVlKQ0KLy8gICAgICAgICAgICAgICAgICAgIH0NCi8vICAgICAgICAgICAgICAgIH0NCi8vICAgICAgICAgICAgICAgIGlmKGIuY2FsbCYmIWMpIHsNCi8vICAgICAgICAgICAgICAgICAgICB1dGQoYixzaG93LHRydWUpDQovLyAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgaWYoT2JqZWN0LmtleXMoYikubGVuZ3RoIT09MCl7DQogICAgICAgICAgICAgICAgICAgIHV0ZChiLGEsc2hvdykNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICB9DQogICAgaWYob2JqLmJvdW5kYXJ5KXsNCiAgICAgICAgdmFyIGJvdW5kYXJ5cz1PYmplY3Qua2V5cyhvYmouYm91bmRhcnkpOw0KICAgICAgICBpZihjaGVja0lEIT09b2JqKXsNCiAgICAgICAgICAgIGZvcih2YXIgaT0wO2k8Ym91bmRhcnlzLmxlbmd0aDtpKyspew0KICAgICAgICAgICAgICAgIHZhciBhPWJvdW5kYXJ5c1tpXS5zbGljZSgxKTsNCiAgICAgICAgICAgICAgICB2YXIgYj1vYmouYm91bmRhcnlbYm91bmRhcnlzW2ldXTsNCiAgICAgICAgICAgICAgICAvLyBjb25zb2xlLmxvZyhhKTsNCiAgICAgICAgICAgICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChhKS5zdHlsZS5kaXNwbGF5PXNob3c7DQovLyAgICAgICAgICAgICAgICBpZihjKXsNCi8vICAgICAgICAgICAgICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6dG9ndG9waWNpZD0nIithKyInXSIpLnN0eWxlLmRpc3BsYXk9c2hvdzsNCi8vICAgICAgICAgICAgICAgICAgICBpZihjPT09J21pbnVzJyl7DQovLyAgICAgICAgICAgICAgICAgICAgICAgIHV0ZChiLHNob3cpDQovLyAgICAgICAgICAgICAgICAgICAgfQ0KLy8gICAgICAgICAgICAgICAgICAgIGlmIChiLmNhbGwmJmM9PT0ncGx1cycpIHsNCi8vICAgICAgICAgICAgICAgICAgICAgICAgdXRkKGIsc2hvdyx0cnVlKQ0KLy8gICAgICAgICAgICAgICAgICAgIH0NCi8vICAgICAgICAgICAgICAgIH0NCi8vICAgICAgICAgICAgICAgIGlmKGIuY2FsbCYmIWMpIHsNCi8vICAgICAgICAgICAgICAgICAgICB1dGQoYixzaG93LHRydWUpDQovLyAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgaWYoT2JqZWN0LmtleXMoYikubGVuZ3RoIT09MCl7DQogICAgICAgICAgICAgICAgICAgIHV0ZChiLGEsc2hvdykNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICB9DQogICAgaWYoIW9jJiZvYmouY2hpbGQpIHsNCiAgICAgICAgdmFyIGNoaWxkcyA9IE9iamVjdC5rZXlzKG9iai5jaGlsZCk7DQogICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgY2hpbGRzLmxlbmd0aDsgaSsrKSB7DQogICAgICAgICAgICB2YXIgYSA9IGNoaWxkc1tpXS5zbGljZSgxKTsNCiAgICAgICAgICAgIHZhciBiID0gb2JqLmNoaWxkW2NoaWxkc1tpXV07DQogICAgICAgICAgICB2YXIgYyA9IGIudG9ndHlwZTsNCiAgICAgICAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGEpLnN0eWxlLmRpc3BsYXkgPSBzaG93Ow0KCQkJdmFyIHRTUGF0aCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoInBhdGhbZWRcXDp0b3N1cGVyaWQ9JyIrYSsiJ10iKTsNCiAgICAgICAgICAgIGlmKHRTUGF0aCl7DQogICAgICAgICAgICAgICAgdFNQYXRoLnN0eWxlLmRpc3BsYXkgPSBzaG93Ow0KICAgICAgICAgICAgfQ0KCQkJdmFyIG5vdGVUaXAgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6bm90ZXRvPSciK2ErIiddIik7DQogICAgICAgICAgICBpZihub3RlVGlwKXsNCiAgICAgICAgICAgICAgICBub3RlVGlwLnN0eWxlLmRpc3BsYXkgPSBzaG93Ow0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgaWYgKGIucmVsYWZyb20mJiFjKXsNCiAgICAgICAgICAgICAgICBpZihiLnJlbGFmcm9tLmRpc3BsYXkhPT0gc2hvdyl7DQogICAgICAgICAgICAgICAgICAgIHZhciByZWxhZnJvbXM9T2JqZWN0LmtleXMoYi5yZWxhZnJvbSk7DQogICAgICAgICAgICAgICAgICAgIHJlbGFmcm9tcy5zcGxpY2UocmVsYWZyb21zLmluZGV4T2YoJ2Rpc3BsYXknKSwxKTsNCiAgICAgICAgICAgICAgICAgICAgZm9yKHZhciBrPTA7azxyZWxhZnJvbXMubGVuZ3RoO2srKyl7DQogICAgICAgICAgICAgICAgICAgICAgICB2YXIgZD1yZWxhZnJvbXNba107DQogICAgICAgICAgICAgICAgICAgICAgICBleHRyYVJlbGFbZF0uaXNDPXRydWU7DQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgYi5yZWxhZnJvbS5kaXNwbGF5ID0gc2hvdzsNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9DQogICAgICAgICAgICBpZiAoYi5yZWxhdG8mJiFjKXsNCiAgICAgICAgICAgICAgICBpZihiLnJlbGF0by5kaXNwbGF5IT09IHNob3cpew0KICAgICAgICAgICAgICAgICAgICB2YXIgcmVsYXRvcz1PYmplY3Qua2V5cyhiLnJlbGF0byk7DQogICAgICAgICAgICAgICAgICAgIHJlbGF0b3Muc3BsaWNlKHJlbGF0b3MuaW5kZXhPZignZGlzcGxheScpLDEpOw0KICAgICAgICAgICAgICAgICAgICBmb3IodmFyIGs9MDtrPHJlbGF0b3MubGVuZ3RoO2srKyl7DQogICAgICAgICAgICAgICAgICAgICAgICB2YXIgZD1yZWxhdG9zW2tdOw0KICAgICAgICAgICAgICAgICAgICAgICAgZXh0cmFSZWxhW2RdLmlzQz10cnVlOw0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgIGIucmVsYXRvLmRpc3BsYXkgPSBzaG93Ow0KICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIGlmIChjKSB7DQogICAgICAgICAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOnRvZ3RvcGljaWQ9JyIgKyBhICsgIiddIikuc3R5bGUuZGlzcGxheSA9IHNob3c7DQogICAgICAgICAgICAgICAgaWYgKGMgPT09ICdtaW51cycpIHsNCiAgICAgICAgICAgICAgICAgICAgdXRkKGIsYSxzaG93KQ0KICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBpZiAoKGIuY2FsbHx8Yi5ib3VuZGFyeXx8Yi5zdW1tYXJ5KSYmYz09PSdwbHVzJykgew0KICAgICAgICAgICAgICAgICAgICB1dGQoYixhLHNob3csdHJ1ZSkNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9DQogICAgICAgICAgICBpZiAoYi5jYWxsJiYhYykgew0KICAgICAgICAgICAgICAgIHV0ZChiLGEsc2hvdyx0cnVlKQ0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgaWYgKGIuc3VtbWFyeSYmIWMpIHsNCiAgICAgICAgICAgICAgICB1dGQoYixhLHNob3cpDQogICAgICAgICAgICB9DQogICAgICAgICAgICBpZiAoYi5ib3VuZGFyeSYmIWMpIHsNCiAgICAgICAgICAgICAgICB1dGQoYixhLHNob3cpDQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICB9DQp9DQoNCmZ1bmN0aW9uIGV4dHJhUmVsYUZpbigpIHsNCiAgICB2YXIgZXh0cmFrZXlzPU9iamVjdC5rZXlzKGV4dHJhUmVsYSk7DQogICAgZm9yKHZhciBpPTA7aTxleHRyYWtleXMubGVuZ3RoO2krKyl7DQogICAgICAgIHZhciBleHRyYU9iaj1leHRyYVJlbGFbZXh0cmFrZXlzW2ldXTsNCiAgICAgICAgaWYoZXh0cmFPYmouaXNDID09PSB0cnVlKXsNCiAgICAgICAgICAgIHZhciBmc2hvdz1kb2N1bWVudC5nZXRFbGVtZW50QnlJZChleHRyYU9iai5mcm9taWQpLnN0eWxlLmRpc3BsYXkgIT09J25vbmUnPyB0cnVlOiBmYWxzZTsNCiAgICAgICAgICAgIHZhciB0c2hvdz1kb2N1bWVudC5nZXRFbGVtZW50QnlJZChleHRyYU9iai50b2lkKS5zdHlsZS5kaXNwbGF5ICE9PSdub25lJz8gdHJ1ZTogZmFsc2U7DQogICAgICAgICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChleHRyYU9iai5pZCkuc3R5bGUuZGlzcGxheT1mc2hvdyAmJiB0c2hvdz8gJ2Jsb2NrJzogJ25vbmUnOw0KICAgICAgICAgICAgZXh0cmFSZWxhW2V4dHJha2V5c1tpXV0uaXNDID0gZmFsc2U7DQogICAgICAgIH0NCiAgICB9DQp9'))</script>
+  </body>
+</html>
